@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="tr"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vaka çalışması — geleneksel parçanın başarısız olduğu yerde hayatta kalan braket</title><meta name="description" content="CalculiX ile onaylanmış bir AM yük-arayüz braketi, geleneksel plaka-ve-gusset tasarımının torsiyon altında tümüyle başarısız olduğu, beyan edilmiş 200 kg-yük kapasiteli bir rotorcraft yük zarfını taşıyor."><link rel="canonical" href="https://pieindustrial.com/tr/evidence/bracket/"><link rel="alternate" hreflang="en" href="https://pieindustrial.com/evidence/bracket/"><link rel="alternate" hreflang="tr" href="https://pieindustrial.com/tr/evidence/bracket/"><link rel="alternate" hreflang="zh" href="https://pieindustrial.com/zh/evidence/bracket/"><link rel="alternate" hreflang="de" href="https://pieindustrial.com/de/evidence/bracket/"><link rel="alternate" hreflang="x-default" href="https://pieindustrial.com/evidence/bracket/"><meta property="og:title" content="Vaka çalışması — geleneksel parçanın başarısız olduğu yerde hayatta kalan braket"><meta property="og:description" content="CalculiX ile onaylanmış bir AM yük-arayüz braketi, geleneksel plaka-ve-gusset tasarımının torsiyon altında tümüyle başarısız olduğu, beyan edilmiş 200 kg-yük kapasiteli bir rotorcraft yük zarfını taşıyor."><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/about.Uw9wJ6HT.css"></head> <body> <header class="site"> <div class="wrap"> <a href="/tr/" class="brand">PIE<b>·</b>INDUSTRIAL</a> <nav class="main"> <a href="/tr/how-it-works/">Nasıl çalışır</a><a href="/tr/discover/">Keşif</a><a href="/tr/evidence/" aria-current="page">Kanıtlar</a><a href="/tr/honesty/">Dürüstlük mimarisi</a><a href="/tr/collaborate/">İş birliği</a><a href="/tr/about/">Hakkında</a> </nav> <div class="lang-switch"> <a href="/evidence/bracket/">EN</a><a href="/tr/evidence/bracket/" aria-current="page">TR</a><a href="/zh/evidence/bracket/">中文</a><a href="/de/evidence/bracket/">DE</a> </div> </div> </header> <main>  <section class="block"> <div class="wrap"> <span class="kicker">Case study A · <span class="badge cert">CalculiX-certified</span></span> <h1>Geleneksel parçanın başarısız olduğu yerde hayatta kalan braket.</h1> <p class="lede">
+Beyan edilmiş, genel bir 200&nbsp;kg-yük kapasiteli rotorcraft yük zarfı için
+        eklemeli imalatla üretilmiş bir yük-arayüz braketi — sıfırdan
+        evrimleştirilmiş, geleneksel referans tasarımıyla aynı çözücü ve
+        malzemeyle onaylanmış.
+</p> </div> </section> <section class="block"> <div class="wrap"> <h2>Kurgu</h2> <p>
+200&nbsp;kg yük rakamı kamuya açık bir ölçek referansıdır. Zarf, yük
+        faktörleri ve tork, <em>ilk nesil çalışmadan önce</em> bir ön kayıtta
+        dondurulmuştur — bunlar herhangi bir üreticiye değil, PIE tarafından
+        beyan edilmiş genel değerlerdir. İddia sonuca göre uyarlanamazdı.
+</p> <ul> <li><strong>Yük durumları</strong> (hepsi değerlendirilir, en kötü durum
+          belirler): +3.5&nbsp;g dikey, −1&nbsp;g dikey, ±1.5&nbsp;g yanal /
+          ön-arka, montaj ekseni etrafında 500&nbsp;N·m torsiyon</li> <li><strong>Emniyet katsayısı barajı:</strong> kaynağı belirtilmiş
+          AlSi10Mg akmasına karşı 1.5 (LPBF datasheet düzeyinde, atıflı)</li> <li><strong>Sınır koşulları:</strong> cıvata deliklerinde yatak
+          yükleri, sıkıştırılmış yüzeyler değil</li> <li><strong>Üretilebilirlik:</strong> LPBF geçitleri — yerel duvar
+          kalınlığı, hapsolmuş boşluklar, toz erişimi, destek oranı</li> </ul> <h2>Sonuç</h2> <div class="tbl-scroll"> <table> <thead> <tr> <th></th> <th>Geleneksel plaka-ve-gusset</th> <th>PIE braketi g00095</th> </tr> </thead> <tbody> <tr> <td>Belirleyici durum</td> <td class="num">torsion</td> <td class="num">torsion</td> </tr> <tr> <td>Belirleyici emniyet katsayısı</td> <td class="num"><span class="fail">0.427 — fails</span></td> <td class="num"><span class="pass">2.055 — passes</span></td> </tr> <tr> <td>En kötü diğer durum</td> <td class="num">fore-aft, SF 1.64</td> <td class="num">vertical +3.5 g, SF 7.40</td> </tr> <tr> <td>İlk yapısal mod</td> <td class="num">54.4 Hz</td> <td class="num">171.6 Hz</td> </tr> <tr> <td>Kütle</td> <td class="num">0.946 kg</td> <td class="num">1.165 kg</td> </tr> <tr> <td>Basılabilirlik (LPBF geçitleri)</td> <td><span class="fail">fails support gate</span></td> <td><span class="pass">passes all gates</span></td> </tr> </tbody> </table> </div> <p class="small dim">
+Her iki sütun da: Gmsh tetrahedral ağları üzerinde CalculiX statik +
+        özfrekans, aynı yük durumları, aynı kaynağı belirtilmiş AlSi10Mg
+        özellikleri. <span class="badge cert">validated_sidecar</span> </p> <div class="callout"> <p><strong>Dürüst değiş tokuş, açıkça söylenirse:</strong> evrimleştirilmiş
+        braket <span class="num">23%</span> daha ağır. Bu bir hafifletme
+        sonucu değildir. Bu, tüm zarfta hayatta kalma sonucudur: geleneksel
+        tasarım, gerekli emniyet katsayısının yarısından daha azında torsiyon
+        altında tümüyle başarısız olurken, evrimleştirilmiş parça beyan
+        edilen her durumu marjla geçer. Onaylı bir kütle kazanımı ortaya
+        çıktığında, aynı kanıtlarla burada görünecektir. Bugün mevcut değildir.</p> </div> <h2>Ön kayıtta beyan edilenler</h2> <p>
+Zarf, yük durumları, uyarım spektrumu, emniyet katsayısı barajı, sabit
+        referans tasarım ve tam iddia tavanı — iterasyon&nbsp;1'den önce
+<code>alpin_bracket_demonstrator_prereg.json</code> dosyasında
+        dondurulmuştur. Ön kayıt ayrıca bu kampanyanın <em>asla</em> iddia
+        edemeyeceklerini de listeler: uçuş veya üretim hazır oluşu, bir
+        yorulma ömrü, ya da aday her geçitte referans tasarımı geçmedikçe
+        bir yüzde-daha-hafif başlığı.
+</p> <div class="grid2" style="align-items:start"> <figure style="margin:0"> <img src="/renders/baseline_plate_gusset.png" alt="Onay STL'sinden render edilmiş geleneksel plaka-ve-gusset referans braketi" width="1600" height="1200" loading="lazy"> <figcaption>
+Geleneksel plaka-ve-gusset referans tasarımı, onay STL'sinden
+            render edilmiştir — torsiyonda SF&nbsp;0.427'de başarısız olan
+            tasarım. Kazananın ağı kendi çözücü çıktılarında yaşıyor; render'ı
+            geometri dışa aktarımı yeniden üretildiğinde burada görünecek.
+</figcaption> </figure> <div class="receipt-card"> <div class="receipt-title"> <span>kazananın onay kaydı</span> <span><span class="dotfile">certification.json</span> <span class="badge cert" style="margin-left:10px">✓ PASS</span></span> </div> <pre class="receipt">{
+  <span class="k">"candidate_id"</span>: <span class="s">"bracket_g00095_21d1fa03afc24"</span>,
+  <span class="k">"evidence_tier"</span>: <span class="s">"validated_sidecar_calculix_gmsh"</span>,
+  <span class="k">"governing_case"</span>: <span class="s">"torsion"</span>,
+  <span class="k">"governing_safety_factor"</span>: <span class="pass">2.0554</span>,
+  <span class="k">"load_cases"</span>: [
+    { <span class="k">"case"</span>: <span class="s">"vertical_+3.5g"</span>, <span class="k">"safety_factor"</span>: 7.4004 },
+    { <span class="k">"case"</span>: <span class="s">"vertical_-1g"</span>,   <span class="k">"safety_factor"</span>: 25.9015 },
+    { <span class="k">"case"</span>: <span class="s">"lateral_1.5g"</span>,  <span class="k">"safety_factor"</span>: 24.8130 },
+    { <span class="k">"case"</span>: <span class="s">"foreaft_1.5g"</span>,  <span class="k">"safety_factor"</span>: 10.7075 },
+    { <span class="k">"case"</span>: <span class="s">"torsion"</span>,       <span class="k">"safety_factor"</span>: <span class="pass">2.0554</span> }
+  ],
+  <span class="k">"passes"</span>: <span class="pass">true</span>, <span class="k">"failures"</span>: []
+}</pre> <div class="receipt-foot">ledger record e9ff00d8… · gmsh 31,487 nodes / 126,665 tets</div> </div> </div> <p class="dim" style="margin-top:28px">
+Yukarıdaki her sayı, hash'lenmiş, eklemeli bir gerçeklik defteri
+        kaydı içindeki bir CalculiX çıktısına kadar izlenir.
+</p> <a class="btn ghost" href="/tr/evidence/">Kanıtlara geri dön</a> <a class="btn solid" href="/tr/collaborate/">Bunu kendi bileşeninizde çalıştırın</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div class="trace"> site iddiaları derlendi: <span style="color:var(--pass)">ALL_TRACED</span> — 28 çözücü-sonucu iddiasının 28&#39;i, hash&#39;lenmiş çözücü kanıtlarına karşı makine tarafından doğrulandı (iddia derleyicisi çalıştırıldı: 2026-07-26). Envanter sayıları 2026-07-26 tarihli sistem denetimine aittir. İzlenebilir bir kaynağı olmayan hiçbir sayı bu sitede yer almaz. </div> <nav> <a href="/tr/how-it-works/">Nasıl çalışır</a><a href="/tr/discover/">Keşif</a><a href="/tr/evidence/">Kanıtlar</a><a href="/tr/honesty/">Dürüstlük mimarisi</a><a href="/tr/collaborate/">İş birliği</a><a href="/tr/about/">Hakkında</a> </nav> <div>PIE — Personal Invention Engine · Türkiye ·
+<a href="mailto:info@pieindustrial.com" style="color:var(--ink-dim)">info@pieindustrial.com</a> </div> </div> </footer> </body></html>

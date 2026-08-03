@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>诚实架构——多数拿到资助的实验室都没有的验证机制</title><meta name="description" content="预注册、主张上限、证据等级、主张编译器、仅追加写入的真值账本、失败博物馆、盲态双通道复核、无效关卡检测，以及代理漂移哨兵。"><link rel="canonical" href="https://pieindustrial.com/zh/honesty/"><link rel="alternate" hreflang="en" href="https://pieindustrial.com/honesty/"><link rel="alternate" hreflang="tr" href="https://pieindustrial.com/tr/honesty/"><link rel="alternate" hreflang="zh" href="https://pieindustrial.com/zh/honesty/"><link rel="alternate" hreflang="de" href="https://pieindustrial.com/de/honesty/"><link rel="alternate" hreflang="x-default" href="https://pieindustrial.com/honesty/"><meta property="og:title" content="诚实架构——多数拿到资助的实验室都没有的验证机制"><meta property="og:description" content="预注册、主张上限、证据等级、主张编译器、仅追加写入的真值账本、失败博物馆、盲态双通道复核、无效关卡检测，以及代理漂移哨兵。"><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/about.Uw9wJ6HT.css"></head> <body> <header class="site"> <div class="wrap"> <a href="/zh/" class="brand">PIE<b>·</b>INDUSTRIAL</a> <nav class="main"> <a href="/zh/how-it-works/">工作原理</a><a href="/zh/discover/">发现范围</a><a href="/zh/evidence/">证据</a><a href="/zh/honesty/" aria-current="page">诚实架构</a><a href="/zh/collaborate/">合作</a><a href="/zh/about/">关于</a> </nav> <div class="lang-switch"> <a href="/honesty/">EN</a><a href="/tr/honesty/">TR</a><a href="/zh/honesty/" aria-current="page">中文</a><a href="/de/honesty/">DE</a> </div> </div> </header> <main>  <section class="block"> <div class="wrap"> <span class="kicker">诚实架构</span> <h1>多数拿到资助的实验室都没有的验证机制。</h1> <p class="lede">
+PIE 是一个只有一名工程师的团队，配备两条 AI 智能体通道——一条
+        引擎通道和一条独立的验证通道，二者被刻意分开，确保没有任何
+        结果可以给自己打分。让这些结果值得信赖的，不是这个团队的规模，
+        而是这套全部运行在 CI 中的架构。
+</p> </div> </section> <section class="block"> <div class="wrap"> <ol class="apparatus"> <li> <b class="t">预注册</b> <p>包络、工况、材料依据、安全系数合格线、基准，以及确切的
+          主张上限，都在<em>第 1 代迭代之前</em>冻结在一份文件中。
+          主张无法根据结果反向调整。</p> </li> <li> <b class="t">主张上限</b> <p>每一场战役都事先申明它被允许产出的最强主张——以及它
+          永远不能主张的内容：飞行就绪状态、疲劳寿命、未在每一项
+          关卡上超越基准就宣称的减重百分比。本网站遵守这些上限。</p> </li> <li> <b class="t">证据等级</b> <p>代理模型给出的数字在结构上就是仅供参考的。只有真实
+          求解器的结果具备可主张等级。任何由代理模型数字驱动的
+          关卡，都会自动把主张限定在“仅供参考”这一等级。</p> </li> <li> <b class="t">主张编译器</b> <p>每一份对外文档——包括本网站——都携带一份清单，把每一个
+          陈述的数字映射到带哈希证据中的一个 JSON 路径。编译器解析
+          每一项主张、检查容差、记录 SHA-256，并返回
+<code>ALL_TRACED</code> 或列出具名的失败项。没有清单，
+          就不能发布。</p> </li> <li> <b class="t">真值账本</b> <p>仅追加写入、内容寻址的 JSONL 记录，记录每一次真实
+          求解器认证——目前共 36 条记录，包括每一次失败。代理模型
+          的结果在结构上就无法进入账本；自检机制证明了这一点。</p> </li> <li> <b class="t">失败博物馆</b> <p>经认证的失败会成为带上下文标签、附重访优先级的记录。
+          失败以证据的方式引导未来的搜索——它们从不会被转化为
+          硬性排除项，也从不会被删除。</p> </li> <li> <b class="t">盲态双通道复核</b> <p>引擎通道的主张由一条独立的验证通道来评判，该通道会
+          自行重新运行各项校验标尺，而不是直接采信报告出的数字。
+          两条通道对同一系统的独立审计曾互相发现过对方的错误——
+          两次纠正都记录在案。</p> </li> <li> <b class="t">无效关卡检测</b> <p>每一个硬性关卡在运行合格之前，都必须先证明自己
+<em>能够失效</em>——即在自身阈值上被扫描测试过。一个
+          判定结果永远不会变化的关卡，根本算不上关卡。</p> </li> <li> <b class="t">代理漂移哨兵</b> <p>用于测量快速模型何时偏离真实情况的检测器——正是产生
+<a href="/zh/evidence/honest-failure/">失败案例研究</a>中
+          40.1% / 约 81× / 约 48σ 这些数字的机制——会对每一场拥有
+          真实求解器认证的战役持续运行。</p> </li> </ol> <div class="callout"> <p>
+这一切并不会让 PIE 更常“正确”。它让 PIE 每一次都
+<strong>可以被核查</strong>——而这才是你从一台发明引擎
+          身上真正需要的特性。
+</p> </div> <a class="btn solid" href="/zh/evidence/">查看它的实际应用</a> <a class="btn ghost" href="/zh/collaborate/">让它为你的部件工作</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div class="trace"> 网站主张已编译核实：<span style="color:var(--pass)">ALL_TRACED</span> — 28 项求解器结果主张中的全部 28 项已通过机器验证，对照哈希化的求解器证据（主张编译器运行于 2026-07-26）。库存数字截至 2026-07-26 系统审计。任何无法追溯来源的数字都不会出现在本网站上。 </div> <nav> <a href="/zh/how-it-works/">工作原理</a><a href="/zh/discover/">发现范围</a><a href="/zh/evidence/">证据</a><a href="/zh/honesty/">诚实架构</a><a href="/zh/collaborate/">合作</a><a href="/zh/about/">关于</a> </nav> <div>PIE — Personal Invention Engine · 土耳其 ·
+<a href="mailto:info@pieindustrial.com" style="color:var(--ink-dim)">info@pieindustrial.com</a> </div> </div> </footer> </body></html>

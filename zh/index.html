@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PIE — 可核查的发明</title><meta name="description" content="PIE 是一台以物理为唯一裁判的进化式发明引擎。本站发布的每一个数字都可追溯到一份带哈希的求解器证据。"><link rel="canonical" href="https://pieindustrial.com/zh/"><link rel="alternate" hreflang="en" href="https://pieindustrial.com/"><link rel="alternate" hreflang="tr" href="https://pieindustrial.com/tr/"><link rel="alternate" hreflang="zh" href="https://pieindustrial.com/zh/"><link rel="alternate" hreflang="de" href="https://pieindustrial.com/de/"><link rel="alternate" hreflang="x-default" href="https://pieindustrial.com/"><meta property="og:title" content="PIE — 可核查的发明"><meta property="og:description" content="PIE 是一台以物理为唯一裁判的进化式发明引擎。本站发布的每一个数字都可追溯到一份带哈希的求解器证据。"><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/about.Uw9wJ6HT.css"></head> <body> <header class="site"> <div class="wrap"> <a href="/zh/" class="brand">PIE<b>·</b>INDUSTRIAL</a> <nav class="main"> <a href="/zh/how-it-works/">工作原理</a><a href="/zh/discover/">发现范围</a><a href="/zh/evidence/">证据</a><a href="/zh/honesty/">诚实架构</a><a href="/zh/collaborate/">合作</a><a href="/zh/about/">关于</a> </nav> <div class="lang-switch"> <a href="/">EN</a><a href="/tr/">TR</a><a href="/zh/" aria-current="page">中文</a><a href="/de/">DE</a> </div> </div> </header> <main>  <section class="block"> <div class="wrap"> <span class="kicker">PIE — Personal Invention Engine（个人发明引擎）</span> <h1>可核查的发明。</h1> <p class="lede">
+PIE 是一台以物理为唯一裁判的进化式发明引擎。
+        它从零开始进化出工程几何形状——其架构决定了它无法在结果上撒谎。
+        本站上的每一个数字都可追溯到一份带哈希的求解器证据。
+</p> <a class="btn solid" href="/zh/evidence/">查看证据</a> <a class="btn ghost" href="/zh/discover/">它能发现什么</a> <a class="btn ghost" href="/zh/evidence/honest-failure/">那场诚实失败的运行</a> </div> </section> <section class="block"> <div class="wrap"> <div class="grid2" style="align-items:start"> <div> <div class="stat-panel" style="margin:0"> <span class="kicker">可主张等级的结果</span> <div class="stat-big"> <span class="pass-num">SF 2.055</span><span class="vs">vs</span><span class="fail-num">0.427</span> </div> <p style="margin-bottom:10px"> <span class="badge cert">CalculiX-certified</span> <span class="badge recompute">declared envelope</span> </p> <p class="small dim" style="margin-bottom:0">
+一个进化生成的增材制造有效载荷支架，能够承受一个申明的
+              200&nbsp;kg 载荷旋翼机载荷包络，而传统的平板加筋设计在扭转工况下直接失效。
+              同一求解器，同一材料，同一批工况。
+              它比传统零件更<strong>重</strong>——
+<span class="num">1.165&nbsp;kg</span> vs <span class="num">0.946&nbsp;kg</span>。
+              我们如实说明这一点，因为另一种选择是让你日后自己发现。
+</p> </div> <p class="small dim" style="margin-top:14px">
+右侧的证据记录并非模拟数据。它是该支架的
+            认证记录——在一个 31,487 节点 / 126,665 四面体单元的 Gmsh 网格上
+            进行的 CalculiX 静力学与固有频率分析。
+<a href="/zh/evidence/bracket/">完整案例研究 →</a> </p> </div> <div class="receipt-card"> <div class="receipt-title"> <span>认证记录</span> <span><span class="dotfile">certification.json</span> <span class="badge cert" style="margin-left:10px">✓ PASS</span></span> </div> <pre class="receipt">{
+  <span class="k">"candidate_id"</span>: <span class="s">"bracket_g00095_21d1fa03afc24"</span>,
+  <span class="k">"evidence_tier"</span>: <span class="s">"validated_sidecar_calculix_gmsh"</span>,
+  <span class="k">"material"</span>: <span class="s">"AlSi10Mg"</span>,
+  <span class="k">"governing_case"</span>: <span class="s">"torsion"</span>,
+  <span class="k">"governing_safety_factor"</span>: <span class="pass">2.0554</span>,
+  <span class="k">"mass_kg"</span>: 1.1647,
+  <span class="k">"first_mode_hz"</span>: 171.58,
+  <span class="k">"mesh"</span>: <span class="s">"gmsh · 31,487 nodes / 126,665 tets"</span>,
+  <span class="k">"passes"</span>: <span class="pass">true</span>,
+  <span class="k">"failures"</span>: []
+}</pre> <div class="receipt-foot">ledger record e9ff00d8… · append-only · content-addressed</div> </div> </div> </div> </section> <section class="block"> <div class="wrap"> <span class="kicker">架构</span> <h2 style="margin-top:0">两只手，中间隔一道防火墙。</h2> <div class="grid3"> <div class="card"> <div class="mono-head">01 · 生成器提出方案</div> <p>基于 CPPN 网络、场晶格、混合基因组的进化式搜索。
+          大语言模型与代理模型可以提出建议并进行路由，但它们被彻底隔离在
+          适应度判定之外，永远不能参与判断。</p> </div> <div class="card"> <div class="mono-head">02 · 物理做出裁决</div> <p>在 Gmsh 网格上运行 CalculiX 有限元分析、格子玻尔兹曼孔隙流动模拟，
+          以及经过验证的自研内核。只有真实求解器给出的结果才具备可主张等级。</p> </div> <div class="card"> <div class="mono-head">03 · 证据留存</div> <p>预注册的主张、一份仅追加写入的真值账本，以及一个把每一个
+          公布数字都机器化追溯到带哈希证据的编译器。</p> </div> </div> <div class="diagram-scroll" role="img" aria-label="PIE 流程：生成器提出候选方案，防火墙阻止判断结果向上游回传，真实求解器进行评估，硬性关卡做出判定，结果进入仅追加的账本"> <svg viewBox="0 0 980 240" xmlns="http://www.w3.org/2000/svg"> <defs> <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"> <path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.4"></path> </marker> </defs> <!-- generator --> <rect class="d-box" x="14" y="62" width="180" height="86"></rect> <text class="d-label" x="34" y="92">生成器</text> <text class="d-sub" x="34" y="112">CPPN · 场晶格 ·</text> <text class="d-sub" x="34" y="127">混合基因组</text> <text class="d-note" x="34" y="170">大语言模型可以提出建议。</text> <text class="d-note" x="34" y="185">但绝不评判。</text> <!-- candidates arrow --> <line class="d-arrow" x1="194" y1="105" x2="268" y2="105"></line> <text class="d-note" x="200" y="95">候选方案</text> <!-- firewall --> <line class="d-wall" x1="290" y1="30" x2="290" y2="210"></line> <line class="d-hatch" x1="290" y1="42" x2="278" y2="54"></line> <line class="d-hatch" x1="290" y1="66" x2="278" y2="78"></line> <line class="d-hatch" x1="290" y1="90" x2="278" y2="102"></line> <line class="d-hatch" x1="290" y1="114" x2="278" y2="126"></line> <line class="d-hatch" x1="290" y1="138" x2="278" y2="150"></line> <line class="d-hatch" x1="290" y1="162" x2="278" y2="174"></line> <line class="d-hatch" x1="290" y1="186" x2="278" y2="198"></line> <text class="d-label" x="290" y="20" text-anchor="middle">防火墙</text> <!-- blocked return path --> <line class="d-arrow-blocked" x1="360" y1="196" x2="300" y2="196"></line> <text class="d-note" x="308" y="215">✕ 判断结果绝不回传</text> <!-- solvers --> <rect class="d-box" x="316" y="62" width="196" height="86"></rect> <text class="d-label" x="336" y="92">真实求解器</text> <text class="d-sub" x="336" y="112">CalculiX 有限元 · Gmsh ·</text> <text class="d-sub" x="336" y="127">D3Q19 格子玻尔兹曼 · 已验证内核</text> <line class="d-arrow" x1="512" y1="105" x2="566" y2="105"></line> <!-- gates --> <rect class="d-box" x="568" y="62" width="180" height="86"></rect> <text class="d-label" x="588" y="92">硬性关卡</text> <text class="d-sub" x="588" y="112">最差工况决定结果 ·</text> <text class="d-sub" x="588" y="127">每个关卡都证明可以失败</text> <line class="d-arrow" x1="748" y1="105" x2="802" y2="105"></line> <!-- ledger --> <rect class="d-box-accent" x="804" y="62" width="162" height="86"></rect> <text class="d-label" x="824" y="92">账本</text> <text class="d-sub" x="824" y="112">仅追加 ·</text> <text class="d-sub" x="824" y="127">通过与失败均记录</text> </svg> </div> <p class="small dim" style="max-width:76ch">
+同一台引擎、同一道防火墙运行在每一个尺度上——晶体微结构、
+        构筑晶格、可打印部件、水务与电力网络、耦合机械系统、动力学系统。
+<a href="/zh/discover/">查看完整范围及各系列的证据等级 →</a> </p> <a class="btn ghost" href="/zh/how-it-works/">架构的工作原理</a> </div> </section> <section class="block"> <div class="wrap"> <div class="grid2" style="align-items:center"> <figure style="margin:0"> <img src="/renders/sector_coupon.png" alt="弯曲的 Inconel 625 环形扇区试样，由可打印 STL 渲染而成" width="1600" height="1200" loading="lazy"> <figcaption>Inconel 625 环形扇区试样——由可打印 STL 渲染而成。</figcaption> </figure> <div> <span class="kicker">同时进行中</span> <h2 style="margin-top:0">一个可打印的燃烧室扇区试样。</h2> <p class="small dim">
+按照某涡喷发动机原始设备制造商公开文档的包络建造：CalculiX 有限元分析
+            （轴向 E <span class="num">136.72 GPa</span>，首次屈服
+<span class="num">165.01 MPa</span>）、已收敛的孔隙流动格子玻尔兹曼模拟、
+            水密打印文件。其报告中的 10 项核心主张经机器编译核实为
+<code>ALL_TRACED</code>。
+</p> <a class="btn ghost" href="/zh/evidence/sector-coupon/">案例研究</a> </div> </div> </div> </section> <section class="block"> <div class="wrap"> <span class="kicker">诚实的失败</span> <h2 style="margin-top:0">代理模型承诺了十二个赢家。求解器让全部十二个都失败了。</h2> <div class="grid2" style="align-items:start"> <figure style="margin:0"> <img src="/renders/failed_g00835.png" alt="代理模型的冠军支架——真实求解器判定其扭转工况 SF 仅为 1.08，未通过" width="1600" height="1200" loading="lazy"> <figcaption>
+代理模型的冠军方案，由其认证 STL 渲染而成。预测
+            SF&nbsp;1.586 <span class="badge advisory">proxy — advisory</span>——但
+            真实求解器判定其 SF&nbsp;1.082，未通过
+<span class="badge fail">0 / 12 passed</span> </figcaption> </figure> <div> <p>
+一次 <span class="num">1,063</span> 代的深度运行，由一个快速的在环代理模型
+            驱动，把它评出的十二个最佳候选方案送去做 CalculiX 认证。真实的
+            扭转安全系数结果为 <span class="num">0.97–1.28</span>，全部低于 1.5 的
+            合格线。<strong>没有一个方案交付。</strong> </p> <p>随后系统对自己的代理模型展开了核查：</p> <ul class="small"> <li>测得其预测偏乐观 <span class="num">40.1%</span>——12 个候选方案中有 12 个都被高估了</li> <li>发现其报告的准确度相对真实情况被低估了约 <span class="num">81×</span></li> <li>发现其置信区间比真实情况窄了约 <span class="num">48σ</span></li> <li>将全部 12 次失败归档进失败博物馆，作为下一次运行的证据</li> </ul> <p class="small dim">
+多数工程 AI 系统会把这种海市蜃楼当作结果发布出去。PIE 的架构决定了它不能这样做。
+</p> <a class="btn ghost" href="/zh/evidence/honest-failure/">完整故事，附全部数字</a> </div> </div> </div> </section> <section class="block"> <div class="wrap"> <span class="kicker">诚实架构</span> <h2 style="margin-top:0">受制于自己制定的规则。</h2> <div class="grid2"> <div class="card"> <div class="mono-head">PREREGISTRATION（预注册）</div> <p>包络、工况、安全线、基准以及确切的主张上限——
+          在第 1 代迭代之前就已冻结，因此主张无法根据结果反向调整。</p> </div> <div class="card"> <div class="mono-head">GROUND-TRUTH LEDGER（真值账本）</div> <p>仅追加写入、内容寻址的记录，记录每一次真实求解器认证——
+          无论通过还是失败。代理模型的结果在结构上就无法进入账本。</p> </div> <div class="card"> <div class="mono-head">CLAIM COMPILER（主张编译器）</div> <p>每一个对外公布的数字都映射到带哈希证据中的一个 JSON 路径，
+          并经机器核验：ALL_TRACED，或列出具名的失败项。没有清单，就不能发布。</p> </div> <div class="card"> <div class="mono-head">BLIND TWO-LANE REVIEW（盲态双通道复核）</div> <p>一个独立的验证通道会自行重新运行各项校验标尺，而不是直接采信
+          报告出的数字。没有任何结果可以给自己打分。</p> </div> </div> <a class="btn ghost" href="/zh/honesty/">完整的诚实架构——九项机制</a> </div> </section> <section class="block"> <div class="wrap" style="text-align:center; padding:24px 0"> <h2 style="margin-top:0">带上一个你在意的部件来试试。</h2> <p class="lede" style="margin:0 auto 18px; max-width:56ch">
+你的载荷包络，你的边界条件。PIE 进化并对候选方案进行求解器认证；
+        你将获得可打印的几何模型和完整的证据链。
+</p> <a class="btn solid" href="/zh/collaborate/">合作方式说明</a> <a class="btn ghost" href="mailto:info@pieindustrial.com">直接发邮件</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div class="trace"> 网站主张已编译核实：<span style="color:var(--pass)">ALL_TRACED</span> — 28 项求解器结果主张中的全部 28 项已通过机器验证，对照哈希化的求解器证据（主张编译器运行于 2026-07-26）。库存数字截至 2026-07-26 系统审计。任何无法追溯来源的数字都不会出现在本网站上。 </div> <nav> <a href="/zh/how-it-works/">工作原理</a><a href="/zh/discover/">发现范围</a><a href="/zh/evidence/">证据</a><a href="/zh/honesty/">诚实架构</a><a href="/zh/collaborate/">合作</a><a href="/zh/about/">关于</a> </nav> <div>PIE — Personal Invention Engine · 土耳其 ·
+<a href="mailto:info@pieindustrial.com" style="color:var(--ink-dim)">info@pieindustrial.com</a> </div> </div> </footer> </body></html>

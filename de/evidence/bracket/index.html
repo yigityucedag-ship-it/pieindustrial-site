@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="de"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Fallstudie — die Halterung, die übersteht, wo das konventionelle Bauteil versagt</title><meta name="description" content="Eine CalculiX-zertifizierte AM-Nutzlasthalterung übersteht ein deklariertes Lastenheft für eine 200 kg-Nutzlast an einem Drehflügler, an dem die konventionelle Platten-und-Knotenblech-Konstruktion bei Torsion komplett versagt."><link rel="canonical" href="https://pieindustrial.com/de/evidence/bracket/"><link rel="alternate" hreflang="en" href="https://pieindustrial.com/evidence/bracket/"><link rel="alternate" hreflang="tr" href="https://pieindustrial.com/tr/evidence/bracket/"><link rel="alternate" hreflang="zh" href="https://pieindustrial.com/zh/evidence/bracket/"><link rel="alternate" hreflang="de" href="https://pieindustrial.com/de/evidence/bracket/"><link rel="alternate" hreflang="x-default" href="https://pieindustrial.com/evidence/bracket/"><meta property="og:title" content="Fallstudie — die Halterung, die übersteht, wo das konventionelle Bauteil versagt"><meta property="og:description" content="Eine CalculiX-zertifizierte AM-Nutzlasthalterung übersteht ein deklariertes Lastenheft für eine 200 kg-Nutzlast an einem Drehflügler, an dem die konventionelle Platten-und-Knotenblech-Konstruktion bei Torsion komplett versagt."><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/about.Uw9wJ6HT.css"></head> <body> <header class="site"> <div class="wrap"> <a href="/de/" class="brand">PIE<b>·</b>INDUSTRIAL</a> <nav class="main"> <a href="/de/how-it-works/">So funktioniert es</a><a href="/de/discover/">Entdecken</a><a href="/de/evidence/" aria-current="page">Nachweise</a><a href="/de/honesty/">Ehrlichkeitsarchitektur</a><a href="/de/collaborate/">Zusammenarbeit</a><a href="/de/about/">Über uns</a> </nav> <div class="lang-switch"> <a href="/evidence/bracket/">EN</a><a href="/tr/evidence/bracket/">TR</a><a href="/zh/evidence/bracket/">中文</a><a href="/de/evidence/bracket/" aria-current="page">DE</a> </div> </div> </header> <main>  <section class="block"> <div class="wrap"> <span class="kicker">Fallstudie A · <span class="badge cert">CalculiX-certified</span></span> <h1>Die Halterung, die übersteht, wo das konventionelle Bauteil versagt.</h1> <p class="lede">
+Eine additiv gefertigte Nutzlast-Schnittstellenhalterung für ein
+        deklariertes, generisches Lastenheft mit 200&nbsp;kg Nutzlast an einem
+        Drehflügler — von Grund auf entwickelt, zertifiziert mit demselben
+        Solver und Material wie ihre konventionelle Baseline.
+</p> </div> </section> <section class="block"> <div class="wrap"> <h2>Der Aufbau</h2> <p>
+Der Wert von 200&nbsp;kg Nutzlast ist ein öffentlicher Größenanker. Das
+        Lastenheft, die Lastfaktoren und das Drehmoment wurden in einer
+        Vorregistrierung <em>vor dem ersten Generationslauf</em> eingefroren —
+        es sind PIE-deklarierte generische Werte, nicht die eines Herstellers.
+        Die Behauptung konnte nicht an das Ergebnis angepasst werden.
+</p> <ul> <li><strong>Lastfälle</strong> (alle ausgewertet, der schlechteste Fall
+          entscheidet): +3.5&nbsp;g vertikal, −1&nbsp;g vertikal, ±1.5&nbsp;g
+          lateral / längs, 500&nbsp;N·m Torsion um die Montageachse</li> <li><strong>Sicherheitsfaktor-Grenze:</strong> 1.5 gegenüber der
+          zitierten AlSi10Mg-Streckgrenze (LPBF-Datenblatt-Qualität, zitiert)</li> <li><strong>Randbedingungen:</strong> Lagerlasten an den
+          Schraubenbohrungen, keine eingespannten Flächen</li> <li><strong>Fertigbarkeit:</strong> LPBF-Gates — lokale Wandstärke,
+          eingeschlossene Hohlräume, Pulverzugang, Stützstruktur-Anteil</li> </ul> <h2>Das Ergebnis</h2> <div class="tbl-scroll"> <table> <thead> <tr> <th></th> <th>Konventionell (Platte und Knotenblech)</th> <th>PIE-Halterung g00095</th> </tr> </thead> <tbody> <tr> <td>Maßgeblicher Lastfall</td> <td class="num">torsion</td> <td class="num">torsion</td> </tr> <tr> <td>Maßgeblicher Sicherheitsfaktor</td> <td class="num"><span class="fail">0.427 — fails</span></td> <td class="num"><span class="pass">2.055 — passes</span></td> </tr> <tr> <td>Ungünstigster weiterer Lastfall</td> <td class="num">fore-aft, SF 1.64</td> <td class="num">vertical +3.5 g, SF 7.40</td> </tr> <tr> <td>Erste Struktureigenform</td> <td class="num">54.4 Hz</td> <td class="num">171.6 Hz</td> </tr> <tr> <td>Masse</td> <td class="num">0.946 kg</td> <td class="num">1.165 kg</td> </tr> <tr> <td>Druckbar (LPBF-Gates)</td> <td><span class="fail">fails support gate</span></td> <td><span class="pass">passes all gates</span></td> </tr> </tbody> </table> </div> <p class="small dim">
+Beide Spalten: CalculiX-Statik + Eigenfrequenzanalyse auf Gmsh-
+        Tetraedernetzen, identische Lastfälle, identische zitierte AlSi10Mg-
+        Eigenschaften.
+<span class="badge cert">validated_sidecar</span> </p> <div class="callout"> <p><strong>Der ehrliche Kompromiss, klar gesagt:</strong> Die
+        evolutionär entwickelte Halterung ist <span class="num">23%</span>
+schwerer. Dies ist kein Leichtbau-Ergebnis. Es ist ein
+        Übersteht-das-gesamte-Lastenheft-Ergebnis: Die konventionelle
+        Konstruktion versagt bei Torsion komplett mit weniger als der Hälfte
+        des geforderten Sicherheitsfaktors, und das evolutionär entwickelte
+        Bauteil besteht jeden deklarierten Lastfall mit Marge. Sobald ein
+        zertifizierter Massegewinn existiert, erscheint er hier mit denselben
+        Belegen. Heute existiert er nicht.</p> </div> <h2>Was vorregistriert wurde</h2> <p>
+Lastenheft, Lastfälle, Anregungsspektrum, Sicherheitsfaktor-Grenze, die
+        feste Baseline und die exakte Behauptungs-Obergrenze — eingefroren in
+<code>alpin_bracket_demonstrator_prereg.json</code> vor Iteration&nbsp;1.
+        Die Vorregistrierung listet auch, was diese Kampagne <em>niemals</em>
+behaupten darf: Flug- oder Serienreife, eine Ermüdungslebensdauer oder
+        eine Prozent-leichter-Schlagzeile, sofern der Kandidat die Baseline
+        nicht bei jedem Gate übertrifft.
+</p> <div class="grid2" style="align-items:start"> <figure style="margin:0"> <img src="/renders/baseline_plate_gusset.png" alt="Konventionelle Platten-und-Knotenblech-Baseline-Halterung, gerendert aus ihrer Zertifizierungs-STL" width="1600" height="1200" loading="lazy"> <figcaption>
+Die konventionelle Platten-und-Knotenblech-Baseline, gerendert aus
+            ihrer Zertifizierungs-STL — die Konstruktion, die bei Torsion mit
+            SF&nbsp;0.427 versagt. Das Netz der Gewinner-Geometrie liegt in
+            ihren Solver-Ausgaben; ihr Render erscheint hier, sobald der
+            Geometrie-Export neu erzeugt wird.
+</figcaption> </figure> <div class="receipt-card"> <div class="receipt-title"> <span>Der Zertifizierungsdatensatz des Gewinners</span> <span><span class="dotfile">certification.json</span> <span class="badge cert" style="margin-left:10px">✓ PASS</span></span> </div> <pre class="receipt">{
+  <span class="k">"candidate_id"</span>: <span class="s">"bracket_g00095_21d1fa03afc24"</span>,
+  <span class="k">"evidence_tier"</span>: <span class="s">"validated_sidecar_calculix_gmsh"</span>,
+  <span class="k">"governing_case"</span>: <span class="s">"torsion"</span>,
+  <span class="k">"governing_safety_factor"</span>: <span class="pass">2.0554</span>,
+  <span class="k">"load_cases"</span>: [
+    { <span class="k">"case"</span>: <span class="s">"vertical_+3.5g"</span>, <span class="k">"safety_factor"</span>: 7.4004 },
+    { <span class="k">"case"</span>: <span class="s">"vertical_-1g"</span>,   <span class="k">"safety_factor"</span>: 25.9015 },
+    { <span class="k">"case"</span>: <span class="s">"lateral_1.5g"</span>,  <span class="k">"safety_factor"</span>: 24.8130 },
+    { <span class="k">"case"</span>: <span class="s">"foreaft_1.5g"</span>,  <span class="k">"safety_factor"</span>: 10.7075 },
+    { <span class="k">"case"</span>: <span class="s">"torsion"</span>,       <span class="k">"safety_factor"</span>: <span class="pass">2.0554</span> }
+  ],
+  <span class="k">"passes"</span>: <span class="pass">true</span>, <span class="k">"failures"</span>: []
+}</pre> <div class="receipt-foot">ledger record e9ff00d8… · gmsh 31,487 nodes / 126,665 tets</div> </div> </div> <p class="dim" style="margin-top:28px">
+Jede Zahl oben lässt sich bis zu einer CalculiX-Ausgabe in einem
+        gehashten, nur erweiterbaren Ground-Truth-Hauptbuch-Datensatz
+        zurückverfolgen.
+</p> <a class="btn ghost" href="/de/evidence/">Zurück zu den Nachweisen</a> <a class="btn solid" href="/de/collaborate/">Dies an Ihrem Bauteil ausführen</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div class="trace"> Website-Behauptungen kompiliert: <span style="color:var(--pass)">ALL_TRACED</span> — 28 von 28 Solver-Ergebnis-Behauptungen maschinell gegen gehashte Solver-Artefakte verifiziert (Claim-Compiler-Lauf: 2026-07-26). Bestandszahlen stammen aus dem Systemaudit vom 2026-07-26. Eine Zahl ohne nachverfolgbare Quelle erscheint nicht auf dieser Website. </div> <nav> <a href="/de/how-it-works/">So funktioniert es</a><a href="/de/discover/">Entdecken</a><a href="/de/evidence/">Nachweise</a><a href="/de/honesty/">Ehrlichkeitsarchitektur</a><a href="/de/collaborate/">Zusammenarbeit</a><a href="/de/about/">Über uns</a> </nav> <div>PIE — Personal Invention Engine · Türkei ·
+<a href="mailto:info@pieindustrial.com" style="color:var(--ink-dim)">info@pieindustrial.com</a> </div> </div> </footer> </body></html>

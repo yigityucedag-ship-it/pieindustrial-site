@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Case study — the run that failed honestly (0 for 12)</title><meta name="description" content="A 1,063-generation run whose proxy promised twelve winners. The real solver failed all twelve. Nothing shipped — and the system quantified its own blind spot."><link rel="canonical" href="https://pieindustrial.com/evidence/honest-failure/"><link rel="alternate" hreflang="en" href="https://pieindustrial.com/evidence/honest-failure/"><link rel="alternate" hreflang="tr" href="https://pieindustrial.com/tr/evidence/honest-failure/"><link rel="alternate" hreflang="zh" href="https://pieindustrial.com/zh/evidence/honest-failure/"><link rel="alternate" hreflang="de" href="https://pieindustrial.com/de/evidence/honest-failure/"><link rel="alternate" hreflang="x-default" href="https://pieindustrial.com/evidence/honest-failure/"><meta property="og:title" content="Case study — the run that failed honestly (0 for 12)"><meta property="og:description" content="A 1,063-generation run whose proxy promised twelve winners. The real solver failed all twelve. Nothing shipped — and the system quantified its own blind spot."><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/about.Uw9wJ6HT.css"></head> <body> <header class="site"> <div class="wrap"> <a href="/" class="brand">PIE<b>·</b>INDUSTRIAL</a> <nav class="main"> <a href="/how-it-works/">How it works</a><a href="/discover/">Discover</a><a href="/evidence/" aria-current="page">Evidence</a><a href="/honesty/">Honesty architecture</a><a href="/collaborate/">Collaborate</a><a href="/about/">About</a> </nav> <div class="lang-switch"> <a href="/evidence/honest-failure/" aria-current="page">EN</a><a href="/tr/evidence/honest-failure/">TR</a><a href="/zh/evidence/honest-failure/">中文</a><a href="/de/evidence/honest-failure/">DE</a> </div> </div> </header> <main>  <section class="block"> <div class="wrap"> <span class="kicker">Case study C · honest failure</span> <h1>The run that failed honestly.</h1> <p class="lede">
+This is what an engine that can't lie looks like when it's wrong.
+</p> </div> </section> <section class="block"> <div class="wrap"> <h2>What happened</h2> <p>
+A <span class="num">1,063</span>-generation deep run evolved brackets
+        against the same preregistered envelope as
+<a href="/evidence/bracket/">case study A</a>, driven by a fast in-loop
+        proxy. The proxy's champion looked like the real prize:
+<span class="num">0.817&nbsp;kg</span> — lighter than the conventional
+        baseline — at a predicted safety factor of <span class="num">1.586</span> <span class="badge advisory">proxy — advisory</span>.
+        Twelve candidates went to CalculiX certification.
+</p> <div class="stat-panel"> <span class="kicker">Certification result</span> <div class="stat-big"><span class="fail-num">0 / 12 passed</span></div> <p class="small dim" style="margin-bottom:0">
+Real torsion safety factors came back
+<span class="num">0.97–1.28</span>, all below the 1.5 bar. The champion
+          certified at <span class="num">0.898&nbsp;kg</span> and
+<span class="num">SF 1.082</span> <span class="badge cert">CalculiX-certified</span>. Nothing shipped.
+</p> </div> <figure> <div class="render-strip"> <img src="/renders/failed_g00296.png" alt="Failed candidate bracket g00296" width="1600" height="1200" loading="lazy"> <img src="/renders/failed_g00552.png" alt="Failed candidate bracket g00552" width="1600" height="1200" loading="lazy"> <img src="/renders/failed_g00835.png" alt="Failed candidate bracket g00835, the proxy champion" width="1600" height="1200" loading="lazy"> </div> <figcaption>
+Three of the twelve failed candidates, rendered from their certification
+          STLs. Right: the proxy champion. All twelve now live in the failure
+          museum as evidence for future runs.
+</figcaption> </figure> <div class="receipt-card" style="max-width:640px"> <div class="receipt-title"> <span>the champion's certification record</span> <span><span class="dotfile">certification.json</span> <span class="badge fail" style="margin-left:10px">✕ FAIL</span></span> </div> <pre class="receipt">{
+  <span class="k">"candidate_id"</span>: <span class="s">"bracket_g00835_709fb11c95094"</span>,
+  <span class="k">"evidence_tier"</span>: <span class="s">"validated_sidecar_calculix_gmsh"</span>,
+  <span class="k">"proxy_predicted"</span>: { <span class="k">"mass_kg"</span>: 0.817, <span class="k">"safety_factor"</span>: <span class="fail">1.586</span> },
+  <span class="k">"mass_kg"</span>: 0.8980,
+  <span class="k">"governing_case"</span>: <span class="s">"torsion"</span>,
+  <span class="k">"governing_safety_factor"</span>: <span class="fail">1.0821</span>,
+  <span class="k">"passes"</span>: <span class="fail">false</span>,
+  <span class="k">"failures"</span>: [<span class="s">"governing_safety_factor&lt;1.5"</span>]
+}</pre> <div class="receipt-foot">ledger record edd966f3… · failure museum record · proxy prediction shown for contrast, advisory tier</div> </div> <h2>Then the system turned on its own proxy</h2> <ol class="apparatus"> <li> <b class="t">The reality-residual oracle measured the proxy 40.1% optimistic</b> <p>Mean relative error on governing safety factor, paired proxy-vs-CalculiX
+          across all candidates — 12 out of 12 over-promised.
+<span class="badge recompute">recompute-verified</span></p> </li> <li> <b class="t">Reported accuracy was understated ~81×</b> <p>The surrogate trained on the proxy's labels reported an error of 0.0056.
+          Its effective error against reality was 0.454. The accuracy gate had
+          measured fidelity to labels, never fidelity to reality — so a new oracle
+          now computes exactly that gap.</p> </li> <li> <b class="t">Its confidence band put reality ~48σ outside</b> <p>Near-total confidence in a grossly wrong value. That surrogate's
+          receipt can no longer read "gate passed" without these three numbers
+          stamped next to it.</p> </li> <li> <b class="t">All 12 failures became evidence</b> <p>Context-tagged records in the failure museum with revisit priors —
+          steering future search away from dead basins as advisory evidence, never
+          as a blacklist.</p> </li> </ol> <h2>Why this is the point, not an embarrassment</h2> <div class="callout"> <p>
+The proxy proposed. The real solver disposed. The gates held, and the
+          preregistered claim ceiling meant the mirage was never publishable in the
+          first place. Most engineering-AI pipelines would have published the
+          0.817&nbsp;kg bracket. <strong>PIE's architecture exists so it can't.</strong> </p> </div> <p> <strong>Current honest state of the bracket campaign:</strong> the only
+        certified passing bracket remains g00095
+        (<a href="/evidence/bracket/">case study A</a>) — heavier and surviving.
+        The proxy is being recalibrated per-run instead of imported from old
+        geometry. When a certified mass win lands, it will be announced with the
+        same receipts as this failure.
+</p> <a class="btn ghost" href="/evidence/">Back to evidence</a> <a class="btn solid" href="/honesty/">The apparatus that caught it</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div class="trace"> site claims compiled: <span style="color:var(--pass)">ALL_TRACED</span> — 28 of 28 solver-result claims machine-verified against hashed solver artifacts (claim compiler run 2026-07-26). Inventory counts date to the 2026-07-26 system audit. A number without a traceable source does not appear on this site. </div> <nav> <a href="/how-it-works/">How it works</a><a href="/discover/">Discover</a><a href="/evidence/">Evidence</a><a href="/honesty/">Honesty architecture</a><a href="/collaborate/">Collaborate</a><a href="/about/">About</a> </nav> <div>PIE — Personal Invention Engine · Türkiye ·
+<a href="mailto:info@pieindustrial.com" style="color:var(--ink-dim)">info@pieindustrial.com</a> </div> </div> </footer> </body></html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Case study — the bracket that survives where the conventional part fails</title><meta name="description" content="A CalculiX-certified AM payload bracket carries a declared 200 kg-payload rotorcraft load envelope where the conventional plate-and-gusset design fails torsion outright."><link rel="canonical" href="https://pieindustrial.com/evidence/bracket/"><link rel="alternate" hreflang="en" href="https://pieindustrial.com/evidence/bracket/"><link rel="alternate" hreflang="tr" href="https://pieindustrial.com/tr/evidence/bracket/"><link rel="alternate" hreflang="zh" href="https://pieindustrial.com/zh/evidence/bracket/"><link rel="alternate" hreflang="de" href="https://pieindustrial.com/de/evidence/bracket/"><link rel="alternate" hreflang="x-default" href="https://pieindustrial.com/evidence/bracket/"><meta property="og:title" content="Case study — the bracket that survives where the conventional part fails"><meta property="og:description" content="A CalculiX-certified AM payload bracket carries a declared 200 kg-payload rotorcraft load envelope where the conventional plate-and-gusset design fails torsion outright."><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/about.Uw9wJ6HT.css"></head> <body> <header class="site"> <div class="wrap"> <a href="/" class="brand">PIE<b>·</b>INDUSTRIAL</a> <nav class="main"> <a href="/how-it-works/">How it works</a><a href="/discover/">Discover</a><a href="/evidence/" aria-current="page">Evidence</a><a href="/honesty/">Honesty architecture</a><a href="/collaborate/">Collaborate</a><a href="/about/">About</a> </nav> <div class="lang-switch"> <a href="/evidence/bracket/" aria-current="page">EN</a><a href="/tr/evidence/bracket/">TR</a><a href="/zh/evidence/bracket/">中文</a><a href="/de/evidence/bracket/">DE</a> </div> </div> </header> <main>  <section class="block"> <div class="wrap"> <span class="kicker">Case study A · <span class="badge cert">CalculiX-certified</span></span> <h1>The bracket that survives where the conventional part fails.</h1> <p class="lede">
+An additively-manufactured payload-interface bracket for a declared, generic
+        200&nbsp;kg-payload rotorcraft load envelope — evolved from scratch,
+        certified by the same solver and material as its conventional baseline.
+</p> </div> </section> <section class="block"> <div class="wrap"> <h2>The setup</h2> <p>
+The 200&nbsp;kg payload figure is a public scale anchor. The envelope, load
+        factors and torque were frozen in a preregistration <em>before the first
+        generation ran</em> — they are PIE-declared generic values, not any
+        manufacturer's. The claim could not be adapted to the result.
+</p> <ul> <li><strong>Load cases</strong> (all evaluated, worst case governs):
+          +3.5&nbsp;g vertical, −1&nbsp;g vertical, ±1.5&nbsp;g lateral / fore-aft,
+          500&nbsp;N·m torsion about the mount axis</li> <li><strong>Safety-factor bar:</strong> 1.5 against sourced AlSi10Mg yield
+          (LPBF datasheet-grade, cited)</li> <li><strong>Boundary conditions:</strong> bearing loads at the bolt bores,
+          not clamped faces</li> <li><strong>Manufacturability:</strong> LPBF gates — local wall thickness,
+          trapped voids, powder access, support fraction</li> </ul> <h2>The result</h2> <div class="tbl-scroll"> <table> <thead> <tr> <th></th> <th>Conventional plate-and-gusset</th> <th>PIE bracket g00095</th> </tr> </thead> <tbody> <tr> <td>Governing case</td> <td class="num">torsion</td> <td class="num">torsion</td> </tr> <tr> <td>Governing safety factor</td> <td class="num"><span class="fail">0.427 — fails</span></td> <td class="num"><span class="pass">2.055 — passes</span></td> </tr> <tr> <td>Worst other case</td> <td class="num">fore-aft, SF 1.64</td> <td class="num">vertical +3.5 g, SF 7.40</td> </tr> <tr> <td>First structural mode</td> <td class="num">54.4 Hz</td> <td class="num">171.6 Hz</td> </tr> <tr> <td>Mass</td> <td class="num">0.946 kg</td> <td class="num">1.165 kg</td> </tr> <tr> <td>Printable (LPBF gates)</td> <td><span class="fail">fails support gate</span></td> <td><span class="pass">passes all gates</span></td> </tr> </tbody> </table> </div> <p class="small dim">
+Both columns: CalculiX static + eigenfrequency on Gmsh tetrahedral meshes,
+        identical load cases, identical sourced AlSi10Mg properties.
+<span class="badge cert">validated_sidecar</span> </p> <div class="callout"> <p><strong>The honest trade, stated plainly:</strong> the evolved bracket is
+<span class="num">23%</span> heavier. This is not a lightweighting result.
+        It is a survives-the-full-envelope result: the conventional design fails
+        torsion outright at less than half the required safety factor, and the
+        evolved part clears every declared case with margin. When a certified mass
+        win exists, it will appear here with the same receipts. It does not exist
+        today.</p> </div> <h2>What was preregistered</h2> <p>
+Envelope, load cases, excitation spectrum, safety-factor bar, the fixed
+        baseline, and the exact claim ceiling — frozen in
+<code>alpin_bracket_demonstrator_prereg.json</code> before iteration&nbsp;1.
+        The preregistration also lists what this campaign may <em>never</em> claim:
+        flight or production readiness, a fatigue life, or a percent-lighter headline
+        unless the candidate beats the baseline on every gate.
+</p> <div class="grid2" style="align-items:start"> <figure style="margin:0"> <img src="/renders/baseline_plate_gusset.png" alt="Conventional plate-and-gusset baseline bracket, rendered from its certification STL" width="1600" height="1200" loading="lazy"> <figcaption>
+The conventional plate-and-gusset baseline, rendered from its
+            certification STL — the design that fails torsion at SF&nbsp;0.427.
+            The winner's mesh lives in its solver outputs; its render will appear
+            here when the geometry export is regenerated.
+</figcaption> </figure> <div class="receipt-card"> <div class="receipt-title"> <span>the winner's certification record</span> <span><span class="dotfile">certification.json</span> <span class="badge cert" style="margin-left:10px">✓ PASS</span></span> </div> <pre class="receipt">{
+  <span class="k">"candidate_id"</span>: <span class="s">"bracket_g00095_21d1fa03afc24"</span>,
+  <span class="k">"evidence_tier"</span>: <span class="s">"validated_sidecar_calculix_gmsh"</span>,
+  <span class="k">"governing_case"</span>: <span class="s">"torsion"</span>,
+  <span class="k">"governing_safety_factor"</span>: <span class="pass">2.0554</span>,
+  <span class="k">"load_cases"</span>: [
+    { <span class="k">"case"</span>: <span class="s">"vertical_+3.5g"</span>, <span class="k">"safety_factor"</span>: 7.4004 },
+    { <span class="k">"case"</span>: <span class="s">"vertical_-1g"</span>,   <span class="k">"safety_factor"</span>: 25.9015 },
+    { <span class="k">"case"</span>: <span class="s">"lateral_1.5g"</span>,  <span class="k">"safety_factor"</span>: 24.8130 },
+    { <span class="k">"case"</span>: <span class="s">"foreaft_1.5g"</span>,  <span class="k">"safety_factor"</span>: 10.7075 },
+    { <span class="k">"case"</span>: <span class="s">"torsion"</span>,       <span class="k">"safety_factor"</span>: <span class="pass">2.0554</span> }
+  ],
+  <span class="k">"passes"</span>: <span class="pass">true</span>, <span class="k">"failures"</span>: []
+}</pre> <div class="receipt-foot">ledger record e9ff00d8… · gmsh 31,487 nodes / 126,665 tets</div> </div> </div> <p class="dim" style="margin-top:28px">
+Every number above traces to a CalculiX output inside a hashed, append-only
+        ground-truth ledger record.
+</p> <a class="btn ghost" href="/evidence/">Back to evidence</a> <a class="btn solid" href="/collaborate/">Run this on your component</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div class="trace"> site claims compiled: <span style="color:var(--pass)">ALL_TRACED</span> — 28 of 28 solver-result claims machine-verified against hashed solver artifacts (claim compiler run 2026-07-26). Inventory counts date to the 2026-07-26 system audit. A number without a traceable source does not appear on this site. </div> <nav> <a href="/how-it-works/">How it works</a><a href="/discover/">Discover</a><a href="/evidence/">Evidence</a><a href="/honesty/">Honesty architecture</a><a href="/collaborate/">Collaborate</a><a href="/about/">About</a> </nav> <div>PIE — Personal Invention Engine · Türkiye ·
+<a href="mailto:info@pieindustrial.com" style="color:var(--ink-dim)">info@pieindustrial.com</a> </div> </div> </footer> </body></html>

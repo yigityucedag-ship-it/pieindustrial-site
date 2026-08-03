@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="de"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Die Ehrlichkeitsarchitektur — Verifikation, die die meisten finanzierten Labore nicht haben</title><meta name="description" content="Vorregistrierung, Behauptungs-Obergrenzen, Evidenzstufen, ein Claim-Compiler, ein nur erweiterbares Ground-Truth-Hauptbuch, ein Fehler-Museum, blindes Zwei-Spuren-Review, Erkennung wirkungsloser Gates und Proxy-Drift-Sentinels."><link rel="canonical" href="https://pieindustrial.com/de/honesty/"><link rel="alternate" hreflang="en" href="https://pieindustrial.com/honesty/"><link rel="alternate" hreflang="tr" href="https://pieindustrial.com/tr/honesty/"><link rel="alternate" hreflang="zh" href="https://pieindustrial.com/zh/honesty/"><link rel="alternate" hreflang="de" href="https://pieindustrial.com/de/honesty/"><link rel="alternate" hreflang="x-default" href="https://pieindustrial.com/honesty/"><meta property="og:title" content="Die Ehrlichkeitsarchitektur — Verifikation, die die meisten finanzierten Labore nicht haben"><meta property="og:description" content="Vorregistrierung, Behauptungs-Obergrenzen, Evidenzstufen, ein Claim-Compiler, ein nur erweiterbares Ground-Truth-Hauptbuch, ein Fehler-Museum, blindes Zwei-Spuren-Review, Erkennung wirkungsloser Gates und Proxy-Drift-Sentinels."><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/about.Uw9wJ6HT.css"></head> <body> <header class="site"> <div class="wrap"> <a href="/de/" class="brand">PIE<b>·</b>INDUSTRIAL</a> <nav class="main"> <a href="/de/how-it-works/">So funktioniert es</a><a href="/de/discover/">Entdecken</a><a href="/de/evidence/">Nachweise</a><a href="/de/honesty/" aria-current="page">Ehrlichkeitsarchitektur</a><a href="/de/collaborate/">Zusammenarbeit</a><a href="/de/about/">Über uns</a> </nav> <div class="lang-switch"> <a href="/honesty/">EN</a><a href="/tr/honesty/">TR</a><a href="/zh/honesty/">中文</a><a href="/de/honesty/" aria-current="page">DE</a> </div> </div> </header> <main>  <section class="block"> <div class="wrap"> <span class="kicker">Die Ehrlichkeitsarchitektur</span> <h1>Verifikation, die die meisten finanzierten Labore nicht haben.</h1> <p class="lede">
+PIE ist ein Ein-Personen-Ingenieurbetrieb mit zwei KI-Agentenspuren —
+        einer Engine-Spur und einer unabhängigen Verifikationsspur, bewusst
+        getrennt, damit sich kein Ergebnis selbst bewertet. Was die Ergebnisse
+        vertrauenswürdig macht, ist nicht die Größe des Betriebs. Es ist dieser
+        Apparat, der vollständig in CI läuft.
+</p> </div> </section> <section class="block"> <div class="wrap"> <ol class="apparatus"> <li> <b class="t">Vorregistrierung</b> <p>Lastenheft, Lastfälle, Materialbasis, Sicherheitsfaktor-Grenze,
+          Baseline und die exakte Behauptungs-Obergrenze werden in einer Datei
+<em>vor Iteration 1</em> eingefroren. Die Behauptung kann nicht an
+          das Ergebnis angepasst werden.</p> </li> <li> <b class="t">Behauptungs-Obergrenzen</b> <p>Jede Kampagne erklärt im Voraus den stärksten Satz, den sie
+          jemals produzieren dürfte — und was sie niemals behaupten darf:
+          Flugreife, Ermüdungslebensdauer, Prozent-leichter ohne die Baseline
+          bei jedem Gate zu übertreffen. Diese Website hält sich an diese
+          Obergrenzen.</p> </li> <li> <b class="t">Evidenzstufen</b> <p>Proxy-Zahlen sind konstruktionsbedingt rein beratend. Nur
+          Ergebnisse echter Solver haben Behauptungs-Niveau. Ein Gate, das mit
+          einer Proxy-Zahl gespeist wird, begrenzt die Behauptung automatisch
+          auf beratend.</p> </li> <li> <b class="t">Der Claim-Compiler</b> <p>Jedes ausgehende Dokument — einschließlich dieser Website —
+          trägt ein Manifest, das jede genannte Zahl auf einen JSON-Pfad
+          innerhalb eines gehashten Evidenz-Artefakts abbildet. Der Compiler
+          löst jede Behauptung auf, prüft die Toleranz, erfasst den SHA-256
+          und liefert <code>ALL_TRACED</code> oder benannte Fehlschläge. Kein
+          Manifest, keine Veröffentlichung.</p> </li> <li> <b class="t">Das Ground-Truth-Hauptbuch</b> <p>Nur erweiterbares, inhaltsadressiertes JSONL jeder echten
+          Solver-Zertifizierung — heute 36 Datensätze, einschließlich jedes
+          Fehlschlags. Ein Proxy-Ergebnis kann konstruktionsbedingt nicht
+          eingehen; der Selbsttest beweist es.</p> </li> <li> <b class="t">Das Fehler-Museum</b> <p>Zertifizierte Fehlschläge werden zu kontext-getaggten
+          Datensätzen mit Wiederbesuchs-Priors. Fehlschläge lenken die
+          künftige Suche als Evidenz — sie werden niemals zu harten
+          Ausschlüssen und nie gelöscht.</p> </li> <li> <b class="t">Blindes Zwei-Spuren-Review</b> <p>Engine-Behauptungen werden von einer unabhängigen
+          Verifikationsspur bewertet, die die Prüfmethoden selbst erneut
+          ausführt, statt gemeldete Zahlen zu übernehmen. Die unabhängigen
+          Audits der beiden Spuren desselben Systems haben sich gegenseitig
+          Fehler nachgewiesen — beide Korrekturen stehen im Journal.</p> </li> <li> <b class="t">Erkennung wirkungsloser Gates</b> <p>Jedes harte Gate muss nachweislich <em>fehlschlagen können</em> —
+          über seine eigene Schwelle hinweg getestet — bevor ein Lauf
+          qualifiziert. Ein Gate, dessen Urteil sich nicht bewegen kann, ist
+          kein Gate.</p> </li> <li> <b class="t">Proxy-Drift-Sentinels</b> <p>Orakel, die messen, wann schnelle Modelle von der Realität
+          abweichen — die Maschinerie, die die Zahlen 40.1% / ~81× / ~48σ in
+          der <a href="/de/evidence/honest-failure/">Fehlschlag-Fallstudie</a>
+erzeugte — laufen gegen jede Kampagne mit echten
+          Solver-Zertifizierungen.</p> </li> </ol> <div class="callout"> <p>
+Nichts davon macht PIE öfter richtig. Es macht PIE
+<strong>jedes Mal überprüfbar</strong> — was die Eigenschaft ist,
+          die man von einer Erfindungs-Engine tatsächlich braucht.
+</p> </div> <a class="btn solid" href="/de/evidence/">In der Anwendung sehen</a> <a class="btn ghost" href="/de/collaborate/">Für Ihr Bauteil einsetzen</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div class="trace"> Website-Behauptungen kompiliert: <span style="color:var(--pass)">ALL_TRACED</span> — 28 von 28 Solver-Ergebnis-Behauptungen maschinell gegen gehashte Solver-Artefakte verifiziert (Claim-Compiler-Lauf: 2026-07-26). Bestandszahlen stammen aus dem Systemaudit vom 2026-07-26. Eine Zahl ohne nachverfolgbare Quelle erscheint nicht auf dieser Website. </div> <nav> <a href="/de/how-it-works/">So funktioniert es</a><a href="/de/discover/">Entdecken</a><a href="/de/evidence/">Nachweise</a><a href="/de/honesty/">Ehrlichkeitsarchitektur</a><a href="/de/collaborate/">Zusammenarbeit</a><a href="/de/about/">Über uns</a> </nav> <div>PIE — Personal Invention Engine · Türkei ·
+<a href="mailto:info@pieindustrial.com" style="color:var(--ink-dim)">info@pieindustrial.com</a> </div> </div> </footer> </body></html>

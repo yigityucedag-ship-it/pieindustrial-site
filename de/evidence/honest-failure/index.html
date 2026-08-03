@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="de"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Fallstudie — der Lauf, der ehrlich scheiterte (0 von 12)</title><meta name="description" content="Ein 1.063-Generationen-Lauf, dessen Proxy zwölf Gewinner versprach. Der echte Solver ließ alle zwölf durchfallen. Nichts ging in Produktion — und das System quantifizierte seinen eigenen blinden Fleck."><link rel="canonical" href="https://pieindustrial.com/de/evidence/honest-failure/"><link rel="alternate" hreflang="en" href="https://pieindustrial.com/evidence/honest-failure/"><link rel="alternate" hreflang="tr" href="https://pieindustrial.com/tr/evidence/honest-failure/"><link rel="alternate" hreflang="zh" href="https://pieindustrial.com/zh/evidence/honest-failure/"><link rel="alternate" hreflang="de" href="https://pieindustrial.com/de/evidence/honest-failure/"><link rel="alternate" hreflang="x-default" href="https://pieindustrial.com/evidence/honest-failure/"><meta property="og:title" content="Fallstudie — der Lauf, der ehrlich scheiterte (0 von 12)"><meta property="og:description" content="Ein 1.063-Generationen-Lauf, dessen Proxy zwölf Gewinner versprach. Der echte Solver ließ alle zwölf durchfallen. Nichts ging in Produktion — und das System quantifizierte seinen eigenen blinden Fleck."><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/about.Uw9wJ6HT.css"></head> <body> <header class="site"> <div class="wrap"> <a href="/de/" class="brand">PIE<b>·</b>INDUSTRIAL</a> <nav class="main"> <a href="/de/how-it-works/">So funktioniert es</a><a href="/de/discover/">Entdecken</a><a href="/de/evidence/" aria-current="page">Nachweise</a><a href="/de/honesty/">Ehrlichkeitsarchitektur</a><a href="/de/collaborate/">Zusammenarbeit</a><a href="/de/about/">Über uns</a> </nav> <div class="lang-switch"> <a href="/evidence/honest-failure/">EN</a><a href="/tr/evidence/honest-failure/">TR</a><a href="/zh/evidence/honest-failure/">中文</a><a href="/de/evidence/honest-failure/" aria-current="page">DE</a> </div> </div> </header> <main>  <section class="block"> <div class="wrap"> <span class="kicker">Fallstudie C · ehrliches Scheitern</span> <h1>Der Lauf, der ehrlich scheiterte.</h1> <p class="lede">
+So sieht es aus, wenn eine Engine, die nicht lügen kann, sich irrt.
+</p> </div> </section> <section class="block"> <div class="wrap"> <h2>Was geschah</h2> <p>
+Ein <span class="num">1,063</span>-Generationen-Tieflauf entwickelte
+        Halterungen gegen dasselbe vorregistrierte Lastenheft wie
+<a href="/de/evidence/bracket/">Fallstudie A</a>, gesteuert von einem
+        schnellen In-Loop-Proxy. Der Champion des Proxys sah aus wie der
+        eigentliche Preis: <span class="num">0.817&nbsp;kg</span> — leichter
+        als die konventionelle Baseline — bei einem vorhergesagten
+        Sicherheitsfaktor von <span class="num">1.586</span> <span class="badge advisory">proxy — advisory</span>. Zwölf Kandidaten
+        gingen zur CalculiX-Zertifizierung.
+</p> <div class="stat-panel"> <span class="kicker">Zertifizierungsergebnis</span> <div class="stat-big"><span class="fail-num">0 / 12 passed</span></div> <p class="small dim" style="margin-bottom:0">
+Die echten Torsions-Sicherheitsfaktoren kamen bei
+<span class="num">0.97–1.28</span> zurück, alle unter der Grenze von
+          1.5. Der Champion wurde bei <span class="num">0.898&nbsp;kg</span>
+und <span class="num">SF 1.082</span> zertifiziert
+<span class="badge cert">CalculiX-certified</span>. Nichts ging in
+          Produktion.
+</p> </div> <figure> <div class="render-strip"> <img src="/renders/failed_g00296.png" alt="Fehlgeschlagene Kandidaten-Halterung g00296" width="1600" height="1200" loading="lazy"> <img src="/renders/failed_g00552.png" alt="Fehlgeschlagene Kandidaten-Halterung g00552" width="1600" height="1200" loading="lazy"> <img src="/renders/failed_g00835.png" alt="Fehlgeschlagene Kandidaten-Halterung g00835, der Champion des Proxys" width="1600" height="1200" loading="lazy"> </div> <figcaption>
+Drei der zwölf fehlgeschlagenen Kandidaten, gerendert aus ihren
+          Zertifizierungs-STLs. Rechts: der Champion des Proxys. Alle zwölf
+          leben nun im Fehler-Museum als Evidenz für künftige Läufe.
+</figcaption> </figure> <div class="receipt-card" style="max-width:640px"> <div class="receipt-title"> <span>Der Zertifizierungsdatensatz des Champions</span> <span><span class="dotfile">certification.json</span> <span class="badge fail" style="margin-left:10px">✕ FAIL</span></span> </div> <pre class="receipt">{
+  <span class="k">"candidate_id"</span>: <span class="s">"bracket_g00835_709fb11c95094"</span>,
+  <span class="k">"evidence_tier"</span>: <span class="s">"validated_sidecar_calculix_gmsh"</span>,
+  <span class="k">"proxy_predicted"</span>: { <span class="k">"mass_kg"</span>: 0.817, <span class="k">"safety_factor"</span>: <span class="fail">1.586</span> },
+  <span class="k">"mass_kg"</span>: 0.8980,
+  <span class="k">"governing_case"</span>: <span class="s">"torsion"</span>,
+  <span class="k">"governing_safety_factor"</span>: <span class="fail">1.0821</span>,
+  <span class="k">"passes"</span>: <span class="fail">false</span>,
+  <span class="k">"failures"</span>: [<span class="s">"governing_safety_factor&lt;1.5"</span>]
+}</pre> <div class="receipt-foot">ledger record edd966f3… · failure museum record · proxy prediction shown for contrast, advisory tier</div> </div> <h2>Dann wandte das System die Prüfung auf seinen eigenen Proxy an</h2> <ol class="apparatus"> <li> <b class="t">Das Reality-Residual-Orakel maß den Proxy als 40.1% zu optimistisch</b> <p>Mittlerer relativer Fehler beim maßgeblichen Sicherheitsfaktor,
+          paarweise Proxy-gegen-CalculiX über alle Kandidaten — 12 von 12
+          überversprochen.
+<span class="badge recompute">recompute-verified</span></p> </li> <li> <b class="t">Die gemeldete Genauigkeit war um ~81× untertrieben</b> <p>Das auf den Labels des Proxys trainierte Surrogat meldete einen
+          Fehler von 0.0056. Sein tatsächlicher Fehler gegenüber der Realität
+          betrug 0.454. Das Genauigkeits-Gate hatte die Treue zu den Labels
+          gemessen, nie die Treue zur Realität — also berechnet ein neues
+          Orakel jetzt genau diese Lücke.</p> </li> <li> <b class="t">Sein Konfidenzband platzierte die Realität ~48σ außerhalb</b> <p>Nahezu vollständiges Vertrauen in einen grob falschen Wert. Der
+          Beleg dieses Surrogats kann nicht mehr „Gate bestanden" lesen, ohne
+          dass diese drei Zahlen daneben gestempelt sind.</p> </li> <li> <b class="t">Alle 12 Fehlschläge wurden zu Evidenz</b> <p>Kontext-getaggte Datensätze im Fehler-Museum mit
+          Wiederbesuchs-Priors — sie lenken die künftige Suche als beratende
+          Evidenz von toten Sackgassen weg, niemals als schwarze Liste.</p> </li> </ol> <h2>Warum das der Punkt ist, keine Peinlichkeit</h2> <div class="callout"> <p>
+Der Proxy schlug vor. Der echte Solver entschied. Die Gates hielten,
+          und die vorregistrierte Behauptungs-Obergrenze bedeutete, dass die
+          Fata Morgana von vornherein nicht veröffentlichungsfähig war. Die
+          meisten Engineering-KI-Pipelines hätten die 0.817&nbsp;kg-Halterung
+          veröffentlicht. <strong>PIEs Architektur ist so gebaut, dass ihr das
+          nicht möglich ist.</strong> </p> </div> <p> <strong>Aktueller ehrlicher Stand der Halterungs-Kampagne:</strong> Die
+        einzige zertifizierte, bestandene Halterung bleibt g00095
+        (<a href="/de/evidence/bracket/">Fallstudie A</a>) — schwerer und
+        überstehend. Der Proxy wird pro Lauf neu kalibriert, statt aus alter
+        Geometrie übernommen zu werden. Sobald ein zertifizierter
+        Massegewinn eintrifft, wird er mit denselben Belegen angekündigt wie
+        dieser Fehlschlag.
+</p> <a class="btn ghost" href="/de/evidence/">Zurück zu den Nachweisen</a> <a class="btn solid" href="/de/honesty/">Der Apparat, der es erkannt hat</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div class="trace"> Website-Behauptungen kompiliert: <span style="color:var(--pass)">ALL_TRACED</span> — 28 von 28 Solver-Ergebnis-Behauptungen maschinell gegen gehashte Solver-Artefakte verifiziert (Claim-Compiler-Lauf: 2026-07-26). Bestandszahlen stammen aus dem Systemaudit vom 2026-07-26. Eine Zahl ohne nachverfolgbare Quelle erscheint nicht auf dieser Website. </div> <nav> <a href="/de/how-it-works/">So funktioniert es</a><a href="/de/discover/">Entdecken</a><a href="/de/evidence/">Nachweise</a><a href="/de/honesty/">Ehrlichkeitsarchitektur</a><a href="/de/collaborate/">Zusammenarbeit</a><a href="/de/about/">Über uns</a> </nav> <div>PIE — Personal Invention Engine · Türkei ·
+<a href="mailto:info@pieindustrial.com" style="color:var(--ink-dim)">info@pieindustrial.com</a> </div> </div> </footer> </body></html>

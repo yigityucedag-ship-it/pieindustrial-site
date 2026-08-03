@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>案例研究——那场诚实失败的运行（0 / 12）</title><meta name="description" content="一次 1,063 代的运行，其代理模型承诺了十二个赢家。真实求解器让全部十二个都失败了。没有一个方案交付——系统还量化了自己的盲区。"><link rel="canonical" href="https://pieindustrial.com/zh/evidence/honest-failure/"><link rel="alternate" hreflang="en" href="https://pieindustrial.com/evidence/honest-failure/"><link rel="alternate" hreflang="tr" href="https://pieindustrial.com/tr/evidence/honest-failure/"><link rel="alternate" hreflang="zh" href="https://pieindustrial.com/zh/evidence/honest-failure/"><link rel="alternate" hreflang="de" href="https://pieindustrial.com/de/evidence/honest-failure/"><link rel="alternate" hreflang="x-default" href="https://pieindustrial.com/evidence/honest-failure/"><meta property="og:title" content="案例研究——那场诚实失败的运行（0 / 12）"><meta property="og:description" content="一次 1,063 代的运行，其代理模型承诺了十二个赢家。真实求解器让全部十二个都失败了。没有一个方案交付——系统还量化了自己的盲区。"><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/about.Uw9wJ6HT.css"></head> <body> <header class="site"> <div class="wrap"> <a href="/zh/" class="brand">PIE<b>·</b>INDUSTRIAL</a> <nav class="main"> <a href="/zh/how-it-works/">工作原理</a><a href="/zh/discover/">发现范围</a><a href="/zh/evidence/" aria-current="page">证据</a><a href="/zh/honesty/">诚实架构</a><a href="/zh/collaborate/">合作</a><a href="/zh/about/">关于</a> </nav> <div class="lang-switch"> <a href="/evidence/honest-failure/">EN</a><a href="/tr/evidence/honest-failure/">TR</a><a href="/zh/evidence/honest-failure/" aria-current="page">中文</a><a href="/de/evidence/honest-failure/">DE</a> </div> </div> </header> <main>  <section class="block"> <div class="wrap"> <span class="kicker">案例研究 C · 诚实的失败</span> <h1>那场诚实失败的运行。</h1> <p class="lede">
+这就是一台不能撒谎的引擎在犯错时的样子。
+</p> </div> </section> <section class="block"> <div class="wrap"> <h2>发生了什么</h2> <p>
+一次 <span class="num">1,063</span> 代的深度运行，在与
+<a href="/zh/evidence/bracket/">案例研究 A</a> 相同的预注册包络下
+        进化支架方案，由一个快速的在环代理模型驱动。代理模型评出的冠军
+        方案看起来就是真正的奖品：<span class="num">0.817&nbsp;kg</span>——
+        比传统基准更轻——预测安全系数为 <span class="num">1.586</span> <span class="badge advisory">proxy — advisory</span>。
+        十二个候选方案被送去做 CalculiX 认证。
+</p> <div class="stat-panel"> <span class="kicker">认证结果</span> <div class="stat-big"><span class="fail-num">0 / 12 passed</span></div> <p class="small dim" style="margin-bottom:0">
+真实的扭转安全系数结果为
+<span class="num">0.97–1.28</span>，全部低于 1.5 的合格线。
+          该冠军方案的认证结果为 <span class="num">0.898&nbsp;kg</span> 与
+<span class="num">SF 1.082</span> <span class="badge cert">CalculiX-certified</span>。没有一个方案交付。
+</p> </div> <figure> <div class="render-strip"> <img src="/renders/failed_g00296.png" alt="失败候选支架 g00296" width="1600" height="1200" loading="lazy"> <img src="/renders/failed_g00552.png" alt="失败候选支架 g00552" width="1600" height="1200" loading="lazy"> <img src="/renders/failed_g00835.png" alt="失败候选支架 g00835，即代理模型的冠军方案" width="1600" height="1200" loading="lazy"> </div> <figcaption>
+十二个失败候选方案中的三个，由其认证 STL 渲染而成。右图：
+          代理模型的冠军方案。全部十二个方案现已归档进失败博物馆，
+          作为未来运行的证据。
+</figcaption> </figure> <div class="receipt-card" style="max-width:640px"> <div class="receipt-title"> <span>冠军候选方案的认证记录</span> <span><span class="dotfile">certification.json</span> <span class="badge fail" style="margin-left:10px">✕ FAIL</span></span> </div> <pre class="receipt">{
+  <span class="k">"candidate_id"</span>: <span class="s">"bracket_g00835_709fb11c95094"</span>,
+  <span class="k">"evidence_tier"</span>: <span class="s">"validated_sidecar_calculix_gmsh"</span>,
+  <span class="k">"proxy_predicted"</span>: { <span class="k">"mass_kg"</span>: 0.817, <span class="k">"safety_factor"</span>: <span class="fail">1.586</span> },
+  <span class="k">"mass_kg"</span>: 0.8980,
+  <span class="k">"governing_case"</span>: <span class="s">"torsion"</span>,
+  <span class="k">"governing_safety_factor"</span>: <span class="fail">1.0821</span>,
+  <span class="k">"passes"</span>: <span class="fail">false</span>,
+  <span class="k">"failures"</span>: [<span class="s">"governing_safety_factor&lt;1.5"</span>]
+}</pre> <div class="receipt-foot">ledger record edd966f3… · failure museum record · proxy prediction shown for contrast, advisory tier</div> </div> <h2>随后系统对自己的代理模型展开了核查</h2> <ol class="apparatus"> <li> <b class="t">现实残差检测器测得代理模型偏乐观 40.1%</b> <p>在全部候选方案上，代理模型与 CalculiX 在控制性安全系数上的
+          配对平均相对误差——12 个中有 12 个都被高估了。
+<span class="badge recompute">recompute-verified</span></p> </li> <li> <b class="t">报告的准确度被低估了约 81×</b> <p>基于代理模型标签训练出的替代模型报告的误差为 0.0056。
+          其相对真实情况的实际误差为 0.454。原来的准确度关卡衡量的
+          只是对标签的保真度，从未衡量对真实情况的保真度——因此现在
+          新增了一个专门计算这一差距的检测器。</p> </li> <li> <b class="t">其置信区间把真实值排除在约 48σ 之外</b> <p>近乎绝对的信心，却对应一个严重错误的数值。该替代模型的
+          证据记录如今不能再只写“关卡通过”，而必须同时附上这三个数字。</p> </li> <li> <b class="t">全部 12 次失败都成为了证据</b> <p>在失败博物馆中形成带上下文标签、附重访优先级的记录——
+          作为参考性证据引导未来的搜索远离已知的失效区域，而绝非
+          黑名单。</p> </li> </ol> <h2>这是重点，而不是尴尬</h2> <div class="callout"> <p>
+代理模型提出方案，真实求解器做出裁决。关卡守住了，预注册的
+          主张上限也意味着这个海市蜃楼从一开始就不可能被发布。多数
+          工程 AI 系统会把那个 0.817&nbsp;kg 的支架发布出去。
+<strong>PIE 的架构决定了它不能这样做。</strong> </p> </div> <p> <strong>支架战役目前的诚实状态：</strong>唯一通过认证的支架
+        仍然是 g00095（<a href="/zh/evidence/bracket/">案例研究 A</a>）——
+        更重，但能够幸存。代理模型正在按每次运行重新校准，
+        而不是从旧的几何数据中直接沿用。当一个经认证的减重方案落地时，
+        它会带着与这次失败同样的证据被公布。
+</p> <a class="btn ghost" href="/zh/evidence/">返回证据页</a> <a class="btn solid" href="/zh/honesty/">抓住这次失败的架构</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div class="trace"> 网站主张已编译核实：<span style="color:var(--pass)">ALL_TRACED</span> — 28 项求解器结果主张中的全部 28 项已通过机器验证，对照哈希化的求解器证据（主张编译器运行于 2026-07-26）。库存数字截至 2026-07-26 系统审计。任何无法追溯来源的数字都不会出现在本网站上。 </div> <nav> <a href="/zh/how-it-works/">工作原理</a><a href="/zh/discover/">发现范围</a><a href="/zh/evidence/">证据</a><a href="/zh/honesty/">诚实架构</a><a href="/zh/collaborate/">合作</a><a href="/zh/about/">关于</a> </nav> <div>PIE — Personal Invention Engine · 土耳其 ·
+<a href="mailto:info@pieindustrial.com" style="color:var(--ink-dim)">info@pieindustrial.com</a> </div> </div> </footer> </body></html>

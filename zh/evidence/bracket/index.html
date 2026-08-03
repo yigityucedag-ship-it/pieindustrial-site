@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="zh"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>案例研究——在传统部件失效之处得以幸存的支架</title><meta name="description" content="一个经 CalculiX 认证的增材制造有效载荷支架，能够承受一个申明的 200 kg 载荷旋翼机载荷包络，而传统的平板加筋设计在扭转工况下直接失效。"><link rel="canonical" href="https://pieindustrial.com/zh/evidence/bracket/"><link rel="alternate" hreflang="en" href="https://pieindustrial.com/evidence/bracket/"><link rel="alternate" hreflang="tr" href="https://pieindustrial.com/tr/evidence/bracket/"><link rel="alternate" hreflang="zh" href="https://pieindustrial.com/zh/evidence/bracket/"><link rel="alternate" hreflang="de" href="https://pieindustrial.com/de/evidence/bracket/"><link rel="alternate" hreflang="x-default" href="https://pieindustrial.com/evidence/bracket/"><meta property="og:title" content="案例研究——在传统部件失效之处得以幸存的支架"><meta property="og:description" content="一个经 CalculiX 认证的增材制造有效载荷支架，能够承受一个申明的 200 kg 载荷旋翼机载荷包络，而传统的平板加筋设计在扭转工况下直接失效。"><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/about.Uw9wJ6HT.css"></head> <body> <header class="site"> <div class="wrap"> <a href="/zh/" class="brand">PIE<b>·</b>INDUSTRIAL</a> <nav class="main"> <a href="/zh/how-it-works/">工作原理</a><a href="/zh/discover/">发现范围</a><a href="/zh/evidence/" aria-current="page">证据</a><a href="/zh/honesty/">诚实架构</a><a href="/zh/collaborate/">合作</a><a href="/zh/about/">关于</a> </nav> <div class="lang-switch"> <a href="/evidence/bracket/">EN</a><a href="/tr/evidence/bracket/">TR</a><a href="/zh/evidence/bracket/" aria-current="page">中文</a><a href="/de/evidence/bracket/">DE</a> </div> </div> </header> <main>  <section class="block"> <div class="wrap"> <span class="kicker">案例研究 A · <span class="badge cert">CalculiX-certified</span></span> <h1>在传统部件失效之处得以幸存的支架。</h1> <p class="lede">
+一个为申明的、通用的 200&nbsp;kg 载荷旋翼机载荷包络设计的增材制造
+        载荷接口支架——从零进化而来，由与其传统基准部件相同的求解器
+        和材料进行认证。
+</p> </div> </section> <section class="block"> <div class="wrap"> <h2>设定</h2> <p>
+200&nbsp;kg 载荷数字是一个公开的量级锚点。包络、载荷系数与扭矩
+        在<em>第一代运行之前</em>就已在预注册中冻结——它们是 PIE 自行申明的
+        通用数值，而非任何制造商的实际数据。因此主张无法根据结果反向调整。
+</p> <ul> <li><strong>工况</strong>（全部评估，最差工况决定结果）：
+          垂直 +3.5&nbsp;g、垂直 −1&nbsp;g、侧向/前后 ±1.5&nbsp;g、
+          绕安装轴 500&nbsp;N·m 扭矩</li> <li><strong>安全系数合格线：</strong>相对于经引证的 AlSi10Mg
+          屈服强度（LPBF 数据手册级，已引用）为 1.5</li> <li><strong>边界条件：</strong>螺栓孔处的轴承载荷，而非夹持面</li> <li><strong>可制造性：</strong>LPBF 关卡——局部壁厚、封闭空腔、
+          粉末可及性、支撑比例</li> </ul> <h2>结果</h2> <div class="tbl-scroll"> <table> <thead> <tr> <th></th> <th>传统平板加筋设计</th> <th>PIE 支架 g00095</th> </tr> </thead> <tbody> <tr> <td>控制性工况</td> <td class="num">torsion</td> <td class="num">torsion</td> </tr> <tr> <td>控制性安全系数</td> <td class="num"><span class="fail">0.427 — fails</span></td> <td class="num"><span class="pass">2.055 — passes</span></td> </tr> <tr> <td>其余工况中最差的一项</td> <td class="num">fore-aft, SF 1.64</td> <td class="num">vertical +3.5 g, SF 7.40</td> </tr> <tr> <td>第一阶结构模态</td> <td class="num">54.4 Hz</td> <td class="num">171.6 Hz</td> </tr> <tr> <td>质量</td> <td class="num">0.946 kg</td> <td class="num">1.165 kg</td> </tr> <tr> <td>可打印性（LPBF 关卡）</td> <td><span class="fail">fails support gate</span></td> <td><span class="pass">passes all gates</span></td> </tr> </tbody> </table> </div> <p class="small dim">
+两列均为：在 Gmsh 四面体网格上进行的 CalculiX 静力学与固有频率分析，
+        相同的工况，相同的经引证 AlSi10Mg 材料属性。
+<span class="badge cert">validated_sidecar</span> </p> <div class="callout"> <p><strong>如实说明这笔权衡：</strong>进化生成的支架重了
+<span class="num">23%</span>。这不是一个减重结果。
+        它是一个能够撑过完整包络的结果：传统设计在扭转工况下直接失效，
+        安全系数不到要求值的一半，而进化生成的部件在每一个申明的工况下
+        都留有余量。当存在一个经认证的减重方案时，它会带着同样的证据
+        出现在这里。今天它还不存在。</p> </div> <h2>预注册内容</h2> <p>
+包络、工况、激励谱、安全系数合格线、固定基准，以及确切的主张
+        上限——都在第 1 代迭代之前冻结在
+<code>alpin_bracket_demonstrator_prereg.json</code> 中。
+        预注册文件还列明了这次战役<em>永远不能</em>主张的内容：
+        飞行或量产就绪状态、疲劳寿命，或者除非候选方案在每一项关卡上
+        都超越基准，否则不得使用“减重百分之几”这样的标题。
+</p> <div class="grid2" style="align-items:start"> <figure style="margin:0"> <img src="/renders/baseline_plate_gusset.png" alt="传统平板加筋基准支架，由其认证 STL 渲染而成" width="1600" height="1200" loading="lazy"> <figcaption>
+传统平板加筋基准设计，由其认证 STL 渲染而成——该设计在
+            扭转工况下于 SF&nbsp;0.427 失效。获胜方案的网格存在于其
+            求解器输出中；其渲染图将在几何导出重新生成后出现于此。
+</figcaption> </figure> <div class="receipt-card"> <div class="receipt-title"> <span>获胜者的认证记录</span> <span><span class="dotfile">certification.json</span> <span class="badge cert" style="margin-left:10px">✓ PASS</span></span> </div> <pre class="receipt">{
+  <span class="k">"candidate_id"</span>: <span class="s">"bracket_g00095_21d1fa03afc24"</span>,
+  <span class="k">"evidence_tier"</span>: <span class="s">"validated_sidecar_calculix_gmsh"</span>,
+  <span class="k">"governing_case"</span>: <span class="s">"torsion"</span>,
+  <span class="k">"governing_safety_factor"</span>: <span class="pass">2.0554</span>,
+  <span class="k">"load_cases"</span>: [
+    { <span class="k">"case"</span>: <span class="s">"vertical_+3.5g"</span>, <span class="k">"safety_factor"</span>: 7.4004 },
+    { <span class="k">"case"</span>: <span class="s">"vertical_-1g"</span>,   <span class="k">"safety_factor"</span>: 25.9015 },
+    { <span class="k">"case"</span>: <span class="s">"lateral_1.5g"</span>,  <span class="k">"safety_factor"</span>: 24.8130 },
+    { <span class="k">"case"</span>: <span class="s">"foreaft_1.5g"</span>,  <span class="k">"safety_factor"</span>: 10.7075 },
+    { <span class="k">"case"</span>: <span class="s">"torsion"</span>,       <span class="k">"safety_factor"</span>: <span class="pass">2.0554</span> }
+  ],
+  <span class="k">"passes"</span>: <span class="pass">true</span>, <span class="k">"failures"</span>: []
+}</pre> <div class="receipt-foot">ledger record e9ff00d8… · gmsh 31,487 nodes / 126,665 tets</div> </div> </div> <p class="dim" style="margin-top:28px">
+以上每一个数字都可追溯到一份哈希化、仅追加写入的真值账本记录中的
+        CalculiX 输出。
+</p> <a class="btn ghost" href="/zh/evidence/">返回证据页</a> <a class="btn solid" href="/zh/collaborate/">在你的部件上运行这一流程</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div class="trace"> 网站主张已编译核实：<span style="color:var(--pass)">ALL_TRACED</span> — 28 项求解器结果主张中的全部 28 项已通过机器验证，对照哈希化的求解器证据（主张编译器运行于 2026-07-26）。库存数字截至 2026-07-26 系统审计。任何无法追溯来源的数字都不会出现在本网站上。 </div> <nav> <a href="/zh/how-it-works/">工作原理</a><a href="/zh/discover/">发现范围</a><a href="/zh/evidence/">证据</a><a href="/zh/honesty/">诚实架构</a><a href="/zh/collaborate/">合作</a><a href="/zh/about/">关于</a> </nav> <div>PIE — Personal Invention Engine · 土耳其 ·
+<a href="mailto:info@pieindustrial.com" style="color:var(--ink-dim)">info@pieindustrial.com</a> </div> </div> </footer> </body></html>

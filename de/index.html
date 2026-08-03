@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="de"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PIE — Erfindungen, die man überprüfen kann</title><meta name="description" content="PIE ist eine evolutionäre Erfindungs-Engine, in der einzig die Physik urteilt. Jede veröffentlichte Zahl lässt sich bis zu einem gehashten Solver-Artefakt zurückverfolgen."><link rel="canonical" href="https://pieindustrial.com/de/"><link rel="alternate" hreflang="en" href="https://pieindustrial.com/"><link rel="alternate" hreflang="tr" href="https://pieindustrial.com/tr/"><link rel="alternate" hreflang="zh" href="https://pieindustrial.com/zh/"><link rel="alternate" hreflang="de" href="https://pieindustrial.com/de/"><link rel="alternate" hreflang="x-default" href="https://pieindustrial.com/"><meta property="og:title" content="PIE — Erfindungen, die man überprüfen kann"><meta property="og:description" content="PIE ist eine evolutionäre Erfindungs-Engine, in der einzig die Physik urteilt. Jede veröffentlichte Zahl lässt sich bis zu einem gehashten Solver-Artefakt zurückverfolgen."><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/about.Uw9wJ6HT.css"></head> <body> <header class="site"> <div class="wrap"> <a href="/de/" class="brand">PIE<b>·</b>INDUSTRIAL</a> <nav class="main"> <a href="/de/how-it-works/">So funktioniert es</a><a href="/de/discover/">Entdecken</a><a href="/de/evidence/">Nachweise</a><a href="/de/honesty/">Ehrlichkeitsarchitektur</a><a href="/de/collaborate/">Zusammenarbeit</a><a href="/de/about/">Über uns</a> </nav> <div class="lang-switch"> <a href="/">EN</a><a href="/tr/">TR</a><a href="/zh/">中文</a><a href="/de/" aria-current="page">DE</a> </div> </div> </header> <main>  <section class="block"> <div class="wrap"> <span class="kicker">PIE — Personal Invention Engine</span> <h1>Erfindungen, die man überprüfen kann.</h1> <p class="lede">
+PIE ist eine evolutionäre Erfindungs-Engine, in der einzig die Physik
+        urteilt. Sie entwickelt technische Geometrie von Grund auf — und ist so
+        aufgebaut, dass sie über die Ergebnisse nicht lügen kann. Jede Zahl auf
+        dieser Website lässt sich bis zu einem gehashten Solver-Artefakt
+        zurückverfolgen.
+</p> <a class="btn solid" href="/de/evidence/">Die Nachweise ansehen</a> <a class="btn ghost" href="/de/discover/">Was PIE entdecken kann</a> <a class="btn ghost" href="/de/evidence/honest-failure/">Der Lauf, der ehrlich scheiterte</a> </div> </section> <section class="block"> <div class="wrap"> <div class="grid2" style="align-items:start"> <div> <div class="stat-panel" style="margin:0"> <span class="kicker">Ergebnis mit Behauptungs-Niveau</span> <div class="stat-big"> <span class="pass-num">SF 2.055</span><span class="vs">vs</span><span class="fail-num">0.427</span> </div> <p style="margin-bottom:10px"> <span class="badge cert">CalculiX-certified</span> <span class="badge recompute">declared envelope</span> </p> <p class="small dim" style="margin-bottom:0">
+Eine evolutionär entwickelte AM-Nutzlasthalterung übersteht ein
+              deklariertes Lastenheft für eine 200&nbsp;kg-Nutzlast an einem
+              Drehflügler, an dem die konventionelle Platten-und-Knotenblech-
+              Konstruktion bei Torsion komplett versagt. Gleicher Solver,
+              gleiches Material, gleiche Lastfälle. Sie ist
+<strong>schwerer</strong> als das konventionelle Bauteil —
+<span class="num">1.165&nbsp;kg</span> vs <span class="num">0.946&nbsp;kg</span>.
+              Das sagen wir unumwunden, denn die Alternative wäre, dass Sie es
+              später herausfinden.
+</p> </div> <p class="small dim" style="margin-top:14px">
+Der Beleg rechts ist keine Attrappe. Es ist der Zertifizierungs-
+            datensatz dieser Halterung — CalculiX-Statik + Eigenfrequenzanalyse
+            auf einem Gmsh-Netz mit 31,487 Knoten / 126,665 Tetraedern.
+<a href="/de/evidence/bracket/">Vollständige Fallstudie →</a> </p> </div> <div class="receipt-card"> <div class="receipt-title"> <span>Zertifizierungsdatensatz</span> <span><span class="dotfile">certification.json</span> <span class="badge cert" style="margin-left:10px">✓ PASS</span></span> </div> <pre class="receipt">{
+  <span class="k">"candidate_id"</span>: <span class="s">"bracket_g00095_21d1fa03afc24"</span>,
+  <span class="k">"evidence_tier"</span>: <span class="s">"validated_sidecar_calculix_gmsh"</span>,
+  <span class="k">"material"</span>: <span class="s">"AlSi10Mg"</span>,
+  <span class="k">"governing_case"</span>: <span class="s">"torsion"</span>,
+  <span class="k">"governing_safety_factor"</span>: <span class="pass">2.0554</span>,
+  <span class="k">"mass_kg"</span>: 1.1647,
+  <span class="k">"first_mode_hz"</span>: 171.58,
+  <span class="k">"mesh"</span>: <span class="s">"gmsh · 31,487 nodes / 126,665 tets"</span>,
+  <span class="k">"passes"</span>: <span class="pass">true</span>,
+  <span class="k">"failures"</span>: []
+}</pre> <div class="receipt-foot">ledger record e9ff00d8… · append-only · content-addressed</div> </div> </div> </div> </section> <section class="block"> <div class="wrap"> <span class="kicker">Architektur</span> <h2 style="margin-top:0">Zwei Hände, und eine Firewall dazwischen.</h2> <div class="grid3"> <div class="card"> <div class="mono-head">01 · Generator schlägt vor</div> <p>Evolutionäre Suche über CPPN-Netzwerke, Feldgitter, hybride
+          Genome. LLMs und Surrogate dürfen vorschlagen und weiterleiten. Sie
+          sind per Firewall davon ausgeschlossen, jemals über Fitness zu
+          urteilen.</p> </div> <div class="card"> <div class="mono-head">02 · Physik entscheidet</div> <p>CalculiX-FEA auf Gmsh-Netzen, Gitter-Boltzmann-Porenströmung,
+          validierte hauseigene Kerne. Nur Ergebnisse echter Solver haben
+          Behauptungs-Niveau.</p> </div> <div class="card"> <div class="mono-head">03 · Belege überdauern</div> <p>Vorregistrierte Behauptungen, ein nur erweiterbares Ground-Truth-
+          Hauptbuch und ein Compiler, der jede veröffentlichte Zahl maschinell
+          bis zu einem gehashten Artefakt zurückverfolgt.</p> </div> </div> <div class="diagram-scroll" role="img" aria-label="PIE-Pipeline: Der Generator schlägt Kandidaten vor, eine Firewall verhindert, dass Bewertungen zurückfließen, echte Solver werten aus, harte Gates entscheiden, Ergebnisse landen im nur erweiterbaren Hauptbuch"> <svg viewBox="0 0 980 240" xmlns="http://www.w3.org/2000/svg"> <defs> <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"> <path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.4"></path> </marker> </defs> <!-- generator --> <rect class="d-box" x="14" y="62" width="180" height="86"></rect> <text class="d-label" x="34" y="92">GENERATOR</text> <text class="d-sub" x="34" y="112">CPPN · Feldgitter ·</text> <text class="d-sub" x="34" y="127">Hybridgenome</text> <text class="d-note" x="34" y="170">LLMs dürfen vorschlagen.</text> <text class="d-note" x="34" y="185">Niemals bewerten.</text> <!-- candidates arrow --> <line class="d-arrow" x1="194" y1="105" x2="268" y2="105"></line> <text class="d-note" x="200" y="95">Kandidaten</text> <!-- firewall --> <line class="d-wall" x1="290" y1="30" x2="290" y2="210"></line> <line class="d-hatch" x1="290" y1="42" x2="278" y2="54"></line> <line class="d-hatch" x1="290" y1="66" x2="278" y2="78"></line> <line class="d-hatch" x1="290" y1="90" x2="278" y2="102"></line> <line class="d-hatch" x1="290" y1="114" x2="278" y2="126"></line> <line class="d-hatch" x1="290" y1="138" x2="278" y2="150"></line> <line class="d-hatch" x1="290" y1="162" x2="278" y2="174"></line> <line class="d-hatch" x1="290" y1="186" x2="278" y2="198"></line> <text class="d-label" x="290" y="20" text-anchor="middle">FIREWALL</text> <!-- blocked return path --> <line class="d-arrow-blocked" x1="360" y1="196" x2="300" y2="196"></line> <text class="d-note" x="308" y="215">✕ Bewertung fließt nie zurück</text> <!-- solvers --> <rect class="d-box" x="316" y="62" width="196" height="86"></rect> <text class="d-label" x="336" y="92">ECHTE SOLVER</text> <text class="d-sub" x="336" y="112">CalculiX FEA · Gmsh ·</text> <text class="d-sub" x="336" y="127">D3Q19 LBM · validierte Kerne</text> <line class="d-arrow" x1="512" y1="105" x2="566" y2="105"></line> <!-- gates --> <rect class="d-box" x="568" y="62" width="180" height="86"></rect> <text class="d-label" x="588" y="92">HARTE GATES</text> <text class="d-sub" x="588" y="112">der schlechteste Fall entscheidet ·</text> <text class="d-sub" x="588" y="127">jedes Gate nachweislich fehlschlagfähig</text> <line class="d-arrow" x1="748" y1="105" x2="802" y2="105"></line> <!-- ledger --> <rect class="d-box-accent" x="804" y="62" width="162" height="86"></rect> <text class="d-label" x="824" y="92">HAUPTBUCH</text> <text class="d-sub" x="824" y="112">nur erweiterbar ·</text> <text class="d-sub" x="824" y="127">Erfolge UND Fehlschläge</text> </svg> </div> <p class="small dim" style="max-width:76ch">
+Dieselbe Engine und dieselbe Firewall laufen auf jeder Skala —
+        Kristallmikrostrukturen, konstruierte Gitter, druckbare Bauteile,
+        Wasser- und Stromnetze, gekoppelte Maschinen, dynamische Systeme.
+<a href="/de/discover/">Das volle Spektrum, mit der Evidenzstufe jeder Familie →</a> </p> <a class="btn ghost" href="/de/how-it-works/">Wie die Architektur funktioniert</a> </div> </section> <section class="block"> <div class="wrap"> <div class="grid2" style="align-items:center"> <figure style="margin:0"> <img src="/renders/sector_coupon.png" alt="Gekrümmter Inconel-625-Ringsektor-Testkupon, gerendert aus der druckfertigen STL-Datei" width="1600" height="1200" loading="lazy"> <figcaption>Inconel-625-Ringsektor-Kupon — gerendert aus der druckfertigen STL-Datei.</figcaption> </figure> <div> <span class="kicker">Auch auf der Werkbank</span> <h2 style="margin-top:0">Ein druckfertiger Brennkammer-Sektorkupon.</h2> <p class="small dim">
+Gefertigt nach dem öffentlich dokumentierten Lastenheft eines
+            Turbojet-OEM: CalculiX-FEA (axiales E <span class="num">136.72 GPa</span>,
+            erste Streckgrenze <span class="num">165.01 MPa</span>), konvergierte
+            Poren-LBM-Strömung, wasserdichte Druckdateien. Die 10 Kernaussagen
+            des zugehörigen Berichts wurden maschinell zu
+<code>ALL_TRACED</code> kompiliert.
+</p> <a class="btn ghost" href="/de/evidence/sector-coupon/">Fallstudie</a> </div> </div> </div> </section> <section class="block"> <div class="wrap"> <span class="kicker">Ehrliches Scheitern</span> <h2 style="margin-top:0">Der Proxy versprach zwölf Gewinner. Der Solver ließ alle zwölf durchfallen.</h2> <div class="grid2" style="align-items:start"> <figure style="margin:0"> <img src="/renders/failed_g00835.png" alt="Der Champion-Halterung des Proxys — der echte Solver ließ sie bei Torsion mit SF 1.08 durchfallen" width="1600" height="1200" loading="lazy"> <figcaption>
+Der Champion des Proxys, gerendert aus seiner Zertifizierungs-STL.
+            Vorhergesagter SF&nbsp;1.586 <span class="badge advisory">proxy — advisory</span> —
+            der echte Solver ließ ihn bei SF&nbsp;1.082 durchfallen
+<span class="badge fail">0 / 12 passed</span> </figcaption> </figure> <div> <p>
+Ein <span class="num">1,063</span>-Generationen-Lauf, gesteuert von
+            einem schnellen In-Loop-Proxy, schickte seine zwölf besten
+            Kandidaten zur CalculiX-Zertifizierung. Die echten Torsions-
+            Sicherheitsfaktoren kamen bei <span class="num">0.97–1.28</span>
+zurück, alle unter der Grenze von 1.5. <strong>Nichts ging in
+            Produktion.</strong> </p> <p>Dann wandte das System die Prüfung auf seinen eigenen Proxy an:</p> <ul class="small"> <li>maß ihn als <span class="num">40.1%</span> zu optimistisch — 12 von 12 Kandidaten überversprochen</li> <li>stellte fest, dass seine gemeldete Genauigkeit die Realität um <span class="num">~81×</span> unterschätzte</li> <li>stellte fest, dass sein Konfidenzband <span class="num">~48σ</span> zu eng war</li> <li>archivierte alle 12 Fehlschläge im Fehler-Museum als Evidenz für den nächsten Lauf</li> </ul> <p class="small dim">
+Die meisten Engineering-KI-Pipelines hätten die Fata Morgana
+            veröffentlicht. PIEs Architektur ist so gebaut, dass ihr das nicht
+            möglich ist.
+</p> <a class="btn ghost" href="/de/evidence/honest-failure/">Die vollständige Geschichte, mit Zahlen</a> </div> </div> </div> </section> <section class="block"> <div class="wrap"> <span class="kicker">Der Ehrlichkeitsapparat</span> <h2 style="margin-top:0">An die eigenen Regeln gebunden.</h2> <div class="grid2"> <div class="card"> <div class="mono-head">VORREGISTRIERUNG</div> <p>Lastenheft, Lastfälle, Sicherheitsgrenze, Baseline und die exakte
+          Behauptungs-Obergrenze — eingefroren vor Iteration 1, damit die
+          Behauptung nicht an das Ergebnis angepasst werden kann.</p> </div> <div class="card"> <div class="mono-head">GROUND-TRUTH-HAUPTBUCH</div> <p>Nur erweiterbarer, inhaltsadressierter Datensatz jeder echten
+          Solver-Zertifizierung — Erfolge und Fehlschläge. Proxy-Ergebnisse
+          können konstruktionsbedingt nicht eingehen.</p> </div> <div class="card"> <div class="mono-head">CLAIM-COMPILER</div> <p>Jede ausgehende Zahl wird auf einen JSON-Pfad in einem gehashten
+          Artefakt abgebildet und maschinell geprüft: ALL_TRACED oder benannte
+          Fehlschläge. Kein Manifest, keine Veröffentlichung.</p> </div> <div class="card"> <div class="mono-head">BLINDES ZWEI-SPUREN-REVIEW</div> <p>Eine unabhängige Verifikationsspur führt die Prüfmethoden selbst
+          erneut aus, statt gemeldete Zahlen zu übernehmen. Kein Ergebnis
+          bewertet sich selbst.</p> </div> </div> <a class="btn ghost" href="/de/honesty/">Der vollständige Apparat — neun Mechanismen</a> </div> </section> <section class="block"> <div class="wrap" style="text-align:center; padding:24px 0"> <h2 style="margin-top:0">Bringen Sie ein Bauteil mit, das Ihnen wichtig ist.</h2> <p class="lede" style="margin:0 auto 18px; max-width:56ch">
+Ihr Lastenheft, Ihre Randbedingungen. PIE entwickelt und solver-
+        zertifiziert Kandidaten; Sie erhalten druckfertige Geometrie und die
+        vollständige Beleg-Kette.
+</p> <a class="btn solid" href="/de/collaborate/">Wie die Zusammenarbeit funktioniert</a> <a class="btn ghost" href="mailto:info@pieindustrial.com">Direkt per E-Mail</a> </div> </section>  </main> <footer class="site"> <div class="wrap"> <div class="trace"> Website-Behauptungen kompiliert: <span style="color:var(--pass)">ALL_TRACED</span> — 28 von 28 Solver-Ergebnis-Behauptungen maschinell gegen gehashte Solver-Artefakte verifiziert (Claim-Compiler-Lauf: 2026-07-26). Bestandszahlen stammen aus dem Systemaudit vom 2026-07-26. Eine Zahl ohne nachverfolgbare Quelle erscheint nicht auf dieser Website. </div> <nav> <a href="/de/how-it-works/">So funktioniert es</a><a href="/de/discover/">Entdecken</a><a href="/de/evidence/">Nachweise</a><a href="/de/honesty/">Ehrlichkeitsarchitektur</a><a href="/de/collaborate/">Zusammenarbeit</a><a href="/de/about/">Über uns</a> </nav> <div>PIE — Personal Invention Engine · Türkei ·
+<a href="mailto:info@pieindustrial.com" style="color:var(--ink-dim)">info@pieindustrial.com</a> </div> </div> </footer> </body></html>
